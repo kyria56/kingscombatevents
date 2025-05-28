@@ -75,40 +75,72 @@
             box-shadow: 0 0 60px #ffe06699, 0 0 0 3px #ffe066;
         }
         .host-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2.5rem 0 2rem 0;
+            flex-wrap: wrap;
         }
         .host-card {
-            background: #232323;
-            border-radius: 16px;
-            box-shadow: 0 0 30px #bfa10033;
-            padding: 2rem 1rem 1rem 1rem;
+            background: linear-gradient(135deg, #232323 80%, #2d2d2d 100%);
+            border-radius: 20px;
+            box-shadow: 0 0 40px #bfa10033, 0 2px 12px #00000044;
+            padding: 2.5rem 2rem 1.5rem 2rem;
             text-align: center;
-            transition: box-shadow 0.3s, transform 0.3s;
             position: relative;
+            width: 320px;
+            min-width: 260px;
+            max-width: 95vw;
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.3s, transform 0.3s;
         }
         .host-card:hover {
             box-shadow: 0 0 60px #ffe06699, 0 0 0 2px #bfa100;
-            transform: translateY(-6px) scale(1.03);
+            transform: translateY(-8px) scale(1.04);
         }
         .host-card img {
-            width: 90px;
-            height: 90px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 1rem;
-            border: 2px solid #bfa100;
+            margin-bottom: 1.2rem;
+            border: 3px solid #bfa100;
+            box-shadow: 0 2px 12px #00000033;
+            position: relative;
+            z-index: 1;
+        }
+        .host-card .poster-badge {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            z-index: 2;
+            font-size: 0.9rem;
+            padding: 0.3rem 0.9rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
         }
         .host-card h3 {
             color: #ffe066;
             font-family: 'Orbitron', sans-serif;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
+            font-size: 1.3rem;
         }
         .host-card p {
             color: #cccccc;
-            font-size: 0.95rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 700px) {
+            .host-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+            .host-card {
+                width: 95vw;
+                min-width: unset;
+                padding: 2rem 1rem 1.2rem 1rem;
+            }
         }
         .poster-grid {
             display: grid;
@@ -139,6 +171,30 @@
         }
         .poster-item:hover img {
             transform: scale(1.08) rotateZ(1deg);
+        }
+        .poster-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ffe066;
+            color: #1a1a1a;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .badge-upcoming {
+            background: #ffe066;
+        }
+        .badge-past {
+            background: #cccccc;
+        }
+        .picture-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px #ffe066aa, 0 0 10px #ffe066;
+        }
+        .picture-item:hover img {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -171,15 +227,71 @@
     </nav>
 
     <main style="padding-top: 90px;">
+        <section class="section-title fade-in">Event Posters</section>
+        <section class="poster-showcase fade-in" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+            <div class="poster-container" style="background: linear-gradient(135deg, #232323 0%, #1a1a1a 100%); border-radius: 20px; padding: 2rem; box-shadow: 0 0 40px rgba(230, 195, 77, 0.1);">
+                <div class="poster-header" style="text-align: center; margin-bottom: 2rem;">
+                    <h3 style="color: #e6c34d; font-family: 'Orbitron', sans-serif; font-size: 1.8rem; margin-bottom: 0.5rem;">Previous Event</h3>
+                    <p style="color: #ffffff; font-size: 1.1rem;">A look back at our last successful tournament</p>
+                </div>
+                <div class="poster-item" style="max-width: 800px; margin: 0 auto; position: relative;">
+                    <span class="poster-badge badge-past" style="position: absolute; top: 20px; left: 20px; z-index: 2; background: #cccccc; color: #1a1a1a; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">Past Event</span>
+                    <img src="images/posters/poster2.jpg" alt="Past Event Poster" style="width: 100%; border-radius: 16px; box-shadow: 0 0 40px rgba(230, 195, 77, 0.2); transition: transform 0.3s ease;">
+                    <div class="poster-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(230, 195, 77, 0.1) 0%, transparent 100%); border-radius: 16px; pointer-events: none;"></div>
+                </div>
+                <div class="poster-info" style="text-align: center; margin-top: 2rem;">
+                    <p style="color: #ffffff; font-size: 1.1rem; line-height: 1.6;">Relive the excitement of our previous tournament, where champions were made and memories were created.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Pictures -->
+        <section class="section-title fade-in">Event Pictures</section>
+        <section class="event-pictures fade-in" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+            <div class="pictures-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; padding: 1rem;">
+                <div class="picture-item" style="background: #232323; border-radius: 12px; box-shadow: 0 0 20px #bfa10033; overflow: hidden;
+                    transition: transform 0.3s, box-shadow 0.3s;">
+                    <img src="images/farzad/farzad1.jpg" alt="Event Picture 1" style="width: 100%; height: 220px; object-fit: cover; display: block;
+                       transition: transform 0.5s cubic-bezier(.77,0,.18,1);">
+                </div>
+                <div class="picture-item" style="background: #232323; border-radius: 12px; box-shadow: 0 0 20px #bfa10033; overflow: hidden;
+                    transition: transform 0.3s, box-shadow 0.3s;">
+                    <img src="images/farzad/farzad2.jpg" alt="Event Picture 2" style="width: 100%; height: 220px; object-fit: cover; display: block;
+                       transition: transform 0.5s cubic-bezier(.77,0,.18,1);">
+                </div>
+                <div class="picture-item" style="background: #232323; border-radius: 12px; box-shadow: 0 0 20px #bfa10033; overflow: hidden;
+                    transition: transform 0.3s, box-shadow 0.3s;">
+                    <img src="images/farzad/farzad3.jpg" alt="Event Picture 3" style="width: 100%; height: 220px; object-fit: cover; display: block;
+                       transition: transform 0.5s cubic-bezier(.77,0,.18,1);">
+                </div>
+                <div class="picture-item" style="background: #232323; border-radius: 12px; box-shadow: 0 0 20px #bfa10033; overflow: hidden;
+                    transition: transform 0.3s, box-shadow 0.3s;">
+                    <img src="images/farzad/farzad4.jpg" alt="Event Picture 4" style="width: 100%; height: 220px; object-fit: cover; display: block;
+                       transition: transform 0.5s cubic-bezier(.77,0,.18,1);">
+                </div>
+                <div class="picture-item" style="background: #232323; border-radius: 12px; box-shadow: 0 0 20px #bfa10033; overflow: hidden;
+                    transition: transform 0.3s, box-shadow 0.3s;">
+                    <img src="images/farzad/farzad5.jpg" alt="Event Picture 5" style="width: 100%; height: 220px; object-fit: cover; display: block;
+                       transition: transform 0.5s cubic-bezier(.77,0,.18,1);">
+                </div>
+                <div class="picture-item" style="background: #232323; border-radius: 12px; box-shadow: 0 0 20px #bfa10033; overflow: hidden;
+                    transition: transform 0.3s, box-shadow 0.3s;">
+                    <img src="images/farzad/farzad6.jpg" alt="Event Picture 6" style="width: 100%; height: 220px; object-fit: cover; display: block;
+                       transition: transform 0.5s cubic-bezier(.77,0,.18,1);">
+                </div>
+            </div>
+        </section>
+
         <section class="section-title fade-in">Kings Combat Videos</section>
         <section class="video-section fade-in" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
             <iframe src="https://www.youtube.com/embed/DRzF5CN-5dA" title="Event Video 1" frameborder="0" allowfullscreen></iframe>
             <iframe src="https://www.youtube.com/embed/0XLL3JvAQFQ" title="Event Video 2" frameborder="0" allowfullscreen></iframe>
         </section>
 
-        <section class="section-title fade-in">Past Hosts</section>
+        <section class="section-title fade-in">Hosts</section>
         <section class="host-grid fade-in">
             <div class="host-card">
+                <span class="poster-badge badge-upcoming">Upcoming Host</span>
                 <img src="images/host.jpg" alt="Dylan Chellamootoo">
                 <h3>Dylan Chellamootoo</h3>
                 <p>
@@ -193,6 +305,7 @@
                 </p>
             </div>
             <div class="host-card">
+                <span class="poster-badge badge-past">Past Host</span>
                 <img src="images/host2.jpg" alt="Farzad Mansouri">
                 <h3>Farzad Mansouri</h3>
                 <p>
@@ -203,16 +316,6 @@
                     Multiple-time International Medallist<br>
                     Tokyo 2020 & Paris 2024
                 </p>
-            </div>
-        </section>
-
-        <section class="section-title fade-in">Event Posters</section>
-        <section class="poster-grid fade-in">
-            <div class="poster-item">
-                <img src="images/posters/poster1.jpg" alt="Poster 1">
-            </div>
-            <div class="poster-item">
-                <img src="images/posters/poster2.jpg" alt="Poster 2">
             </div>
         </section>
     </main>
@@ -227,7 +330,7 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="event.html">Upcoming Events</a></li>
+                    <li><a href="event.html">Event Info</a></li>
                     <li><a href="registration.html">Registration</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
