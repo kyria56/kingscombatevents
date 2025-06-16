@@ -13,9 +13,9 @@
 <body>
     <nav class="navbar">
         <div class="nav-brand">
-            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-                <img src="images/logo.png" alt="Kings Combat Logo" style="height:38px; width:auto; display:block;">
-                <span style="font-size: 1.7rem; font-family: 'Orbitron', sans-serif; color: #e6c34d; letter-spacing: 2px;">KINGS COMBAT</span>
+            <a href="index.html">
+                <img src="images/logo.png" alt="Kings Combat Logo">
+                <span>KINGS COMBAT</span>
             </a>
         </div>
         <div class="nav-toggle" id="navToggle">
@@ -37,8 +37,8 @@
         </div>
     </nav>
 
-    <main style="min-height: 60vh; display: flex; align-items: center; justify-content: center;">
-        <h1 style="color: #e6c34d; font-family: 'Orbitron', sans-serif; font-size: 2.2rem; text-align: center;">Upcoming events will be announced soon!</h1>
+    <main>
+        <h1>Upcoming events will be announced soon!</h1>
     </main>
 
     <footer>
@@ -73,20 +73,149 @@
     <script src="js/main.js"></script>
 
     <style>
+        /* Base styles for elements previously with inline styles */
+        .nav-brand a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-brand img {
+            height:38px;
+            width:auto;
+            display:block;
+        }
+
+        .nav-brand span {
+            font-size: 1.7rem;
+            font-family: 'Orbitron', sans-serif;
+            color: #e6c34d;
+            letter-spacing: 2px;
+        }
+
+        /* Ensure navbar itself is a flex container for alignment */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically align items */
+            padding: 1rem 2rem; /* Add some default padding */
+            width: 100%;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        main {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column; /* Stack h1 vertically if needed */
+            align-items: center;
+            justify-content: center;
+            color: #e6c34d;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        main h1 {
+            font-size: 2.2rem;
+            text-align: center;
+        }
+
         /* Mobile Optimizations for upcoming-events.html */
         @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap; /* Allow items to wrap to the next line */
+                padding: 1rem; /* Adjust padding for smaller screens */
+                justify-content: space-between; /* Ensure brand and toggle are spaced out */
+            }
+
+            .navbar .nav-brand {
+                width: calc(100% - 60px); /* Adjust width to make space for toggle if needed */
+                text-align: left; /* Align brand text to left within its space */
+                margin-bottom: 1rem; /* Add space below brand */
+                display: flex; /* Make brand a flex container */
+                align-items: center; /* Vertically align logo and text */
+            }
+
+            .navbar .nav-brand a {
+                justify-content: flex-start; /* Align logo and text to start */
+                width: 100%; /* Ensure the link takes full width */
+            }
+
+            .navbar .nav-brand img {
+                margin-right: 10px; /* Space between logo and text */
+            }
+
+            .navbar .nav-brand span {
+                font-size: 1.2rem;
+                letter-spacing: 0.5px;
+            }
+
+            .navbar .nav-toggle {
+                display: block;
+                width: 40px; /* Give toggle a fixed width */
+                height: 40px; /* Give toggle a fixed height */
+                display: flex; /* Make toggle a flex container for centering lines */
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                z-index: 1001; /* Ensure toggle is above nav-menu */
+            }
+
+            .navbar .nav-toggle span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: #e6c34d;
+                margin: 4px 0;
+                transition: 0.4s;
+            }
+
+            .navbar .nav-social {
+                display: none !important; /* Force hide social icons */
+            }
+
+            .navbar .nav-menu {
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #1a1a1a;
+                border-top: 1px solid #e6c34d;
+                display: none;
+                z-index: 1000;
+            }
+
+            .navbar .nav-menu.active {
+                display: flex;
+            }
+
+            .navbar .nav-menu li {
+                width: 100%;
+                text-align: center;
+                padding: 1rem 0;
+                border-bottom: 1px solid #2a2a2a;
+            }
+
+            .navbar .nav-menu li:last-child {
+                border-bottom: none;
+            }
+
+            /* Main content mobile styles */
             main {
-                width: 100%; /* Ensure main content takes full width */
-                max-width: 100%; /* Prevent overflow */
-                box-sizing: border-box; /* Include padding in width calculations */
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
                 padding: 0 1rem; /* Add padding to main section for spacing */
-                margin: 0 auto; /* Center the main content */
+                margin: 0 auto;
             }
 
             main h1 {
                 font-size: 1.8rem;
-                text-align: center; /* Ensure heading is centered */
+                text-align: center;
                 word-wrap: break-word; /* Ensure long text wraps */
+                max-width: 95%; /* Limit width to prevent overflow */
+                margin: 0 auto; /* Ensure centering for heading itself */
             }
 
             .footer-content {
