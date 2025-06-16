@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Combat - Taekwondo Excellence</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-content">
+                <h1>KINGS COMBAT</h1>
+                <div class="loader-bar">
+                    <div class="loader-progress"></div>
+                </div>
+            </div>
+        </div>
+        <div id="particles-js"></div>
+    </div>
+
+    <!-- Hero Poster Section -->
+    <section class="hero-poster-section" style="position: relative; overflow: hidden; height: 95vh; display: flex; align-items: center; justify-content: center; background: #0a0a0a; animation: poster-entrance 1s ease-out forwards;">
+        <div class="poster-frame" style="position: relative; width: 90%; height: 90%; max-width: 1100px; max-height: 700px; border: 4px solid #e6c34d; border-radius: 20px; box-shadow: 0 0 100px rgba(230, 195, 77, 0.8), 0 0 50px rgba(230, 195, 77, 0.6); overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img src="images/posters/poster1.jpg" alt="Kings Combat Event Poster" style="width: 100%; height: 100%; object-fit: contain; display: block; filter: none;">
+            <div class="frame-glow" style="position: absolute; top: -10%; left: -10%; width: 120%; height: 120%; background: radial-gradient(circle at center, rgba(230, 195, 77, 0.15) 0%, transparent 60%); animation: spin 30s linear infinite; opacity: 0.5; z-index: 1;"></div>
+        </div>
+        <div class="poster-overlay-gradient" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0.6)); z-index: 1;"></div>
+        <div class="poster-content-overlay" style="position: relative; z-index: 2; text-align: center; color: #ffffff; max-width: 900px; padding: 20px;">
+            <h2 style="font-family: 'Orbitron', sans-serif; font-size: 3.5rem; color: #e6c34d; margin-bottom: 1rem; text-shadow: 0 0 20px rgba(230, 195, 77, 0.5);">The Arena Awaits</h2>
+            <p style="font-size: 1.5rem; color: #ffffff; margin-bottom: 2rem;">Experience the thrill of the Kings Combat Event 2025</p>
+            <a href="event.html" class="cta-button" style="background: #e6c34d; color: #1a1a1a; text-decoration: none; padding: 1rem 2.5rem; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: transform 0.3s, box-shadow 0.3s;">Event Details</a>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="images/logo.png" alt="Kings Combat Logo" style="height:38px; width:auto; display:block;">
+                <span style="font-size: 1.7rem; font-family: 'Orbitron', sans-serif; color: #e6c34d; letter-spacing: 2px;">KINGS COMBAT</span>
+            </a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="event.html">Upcoming Events</a></li>
+            <li><a href="past-events.html">Past Events</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-social">
+            <a href="https://www.instagram.com/kingscombatsports?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100087523166726" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </nav>
+
+    <!-- New Event Showcase Section -->
+    <section class="event-showcase-section" style="
+        position: relative;
+        padding: 5rem 2rem;
+        background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+        text-align: center;
+        overflow: hidden;
+        margin-top: -5vh; /* Overlap slightly with poster section */
+    ">
+        <div class="grid-overlay" style="
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(0deg, transparent 24%, rgba(30, 255, 255, 0.05) 25%, rgba(30, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(30, 255, 255, 0.05) 75%, rgba(30, 255, 255, 0.05) 76%, transparent 77%, transparent),
+                linear-gradient(90deg, transparent 24%, rgba(30, 255, 255, 0.05) 25%, rgba(30, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(30, 255, 255, 0.05) 75%, rgba(30, 255, 255, 0.05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+            z-index: 0;
+            opacity: 0.2;
+            animation: moveGrid 20s linear infinite;
+        "></div>
+        <h2 style="
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.2rem;
+            color: #66e6ff; /* Neon blue */
+            margin-bottom: 2.5rem;
+            text-shadow: 0 0 25px rgba(102, 230, 255, 0.7), 0 0 10px rgba(102, 230, 255, 0.5);
+            position: relative; z-index: 1;
+        ">ULTRA EVENT: REGISTER NOW!</h2>
+
+        <div class="event-details-flex" style="
+            display: flex;
+            flex-direction: column; /* Default to column for small screens */
+            align-items: center;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative; z-index: 1;
+        ">
+            <img src="images/host.jpg" alt="Dylan's Picture" style="
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                border-radius: 15px;
+                box-shadow: 0 0 40px rgba(255, 255, 255, 0.2), 0 0 80px rgba(102, 230, 255, 0.5);
+                filter: brightness(1.1) contrast(1.1);
+                transition: transform 0.3s ease-in-out;
+            " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+
+            <div class="event-info-text" style="
+                text-align: left;
+                color: #e0e0e0;
+                font-size: 1.25rem;
+                line-height: 1.7;
+                max-width: 500px;
+            ">
+                <p style="margin-bottom: 1.5rem;">Prepare for the ultimate clash of titans at the next Kings Combat event! Witness unparalleled Taekwondo skill, precision, and raw power as elite athletes battle for supremacy.</p>
+                <p style="margin-bottom: 2.5rem;">This is more than just a competition; it's a spectacle of martial arts mastery, a testament to dedication, and a platform where legends are forged. Don't miss your chance to be part of history!</p>
+                <a href="registration.html" class="cta-button" style="
+                    display: inline-block;
+                    padding: 1.2rem 3rem;
+                    background: linear-gradient(45deg, #ffc107, #ffeb3b); /* Gold/Yellow gradient */
+                    color: #1a1a1a;
+                    text-decoration: none;
+                    border-radius: 50px; /* More rounded, futuristic button */
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    box-shadow: 0 0 20px rgba(255, 235, 59, 0.6);
+                    position: relative;
+                    overflow: hidden;
+                " onmouseover="this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 0 30px rgba(255, 235, 59, 0.8), 0 0 15px rgba(255, 235, 59, 0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 20px rgba(255, 235, 59, 0.6)'">
+                    Secure Your Spot!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="past-events-section" style="
+        position: relative;
+        padding: 6rem 2rem;
+        background: #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        border-top: 2px solid rgba(102, 230, 255, 0.2); /* Neon border */
+    ">
+        <h2 style="
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            color: #ff33cc; /* Neon pink/magenta */
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(255, 51, 204, 0.7), 0 0 8px rgba(255, 51, 204, 0.5);
+            position: relative; z-index: 1;
+        ">RELIVE THE GLORY</h2>
+        <p style="
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative; z-index: 1;
+        ">Journey through the annals of Kings Combat history. Witness the epic battles, the triumphs, and the moments that defined our legacy.</p>
+        <a href="past-events.html" class="cta-button" style="
+            display: inline-block;
+            padding: 1.2rem 3.5rem;
+            background: linear-gradient(45deg, #00ffff, #00bcd4); /* Cyan/Aqua gradient */
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+            position: relative;
+            overflow: hidden;
+        " onmouseover="this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 0 30px rgba(0, 255, 255, 0.8), 0 0 15px rgba(0, 255, 255, 0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 20px rgba(0, 255, 255, 0.6)'">
+            View Past Events
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> kingscombatevents@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (626) 367-6562</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="event.html">Event Info</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/kingscombatsports?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100087523166726" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kings Combat Events. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="video-modal-close">&times;</span>
+            <div id="videoDynamicContent"></div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes button-pulse {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(0.7); opacity: 0.05; }
+            100% { transform: scale(0.8); opacity: 0; }
+        }
+
+        @keyframes poster-entrance {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes moveGrid {
+            from { background-position: 0 0; }
+            to { background-position: 50px 50px; }
+        }
+
+        /* Mobile Optimizations for index.html */
+        @media (max-width: 768px) {
+            .hero-poster-section .poster-content-overlay h2 {
+                font-size: 2.5rem; /* Smaller font size for mobile hero title */
+            }
+
+            .hero-poster-section .poster-content-overlay p {
+                font-size: 1.1rem; /* Smaller font size for mobile hero subtitle */
+            }
+
+            .hero-poster-section .cta-button {
+                padding: 0.8rem 2rem; /* Smaller padding for mobile CTA button */
+                font-size: 1rem;
+            }
+
+            .navbar .nav-brand span {
+                font-size: 1.2rem; /* Smaller brand text on mobile */
+                letter-spacing: 1px;
+            }
+
+            .navbar .nav-menu {
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #1a1a1a; /* Dark background for mobile menu */
+                border-top: 1px solid #e6c34d;
+                display: none; /* Hidden by default */
+                z-index: 1000;
+            }
+
+            .navbar .nav-menu.active {
+                display: flex;
+            }
+
+            .navbar .nav-menu li {
+                width: 100%;
+                text-align: center;
+                padding: 1rem 0;
+                border-bottom: 1px solid #2a2a2a;
+            }
+
+            .navbar .nav-menu li:last-child {
+                border-bottom: none;
+            }
+
+            .navbar .nav-toggle {
+                display: block; /* Show hamburger icon on mobile */
+            }
+
+            .navbar .nav-social {
+                display: none; /* Hide social icons on mobile nav for cleaner look */
+            }
+
+            .event-showcase-section h2 {
+                font-size: 2.2rem; /* Adjust font size for event showcase title */
+            }
+
+            .event-showcase-section .event-details-flex {
+                flex-direction: column; /* Stack image and text vertically */
+            }
+
+            .event-showcase-section .event-info-text {
+                text-align: center; /* Center align text on mobile */
+            }
+
+            .past-events-section h2 {
+                font-size: 2.2rem; /* Adjust font size for past events title */
+            }
+
+            .past-events-section p {
+                font-size: 1rem; /* Adjust font size for past events paragraph */
+            }
+
+            .past-events-section .cta-button {
+                padding: 1rem 2.5rem; /* Adjust padding for past events CTA */
+                font-size: 1.1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .footer-section ul {
+                padding: 0;
+            }
+
+            .footer-section ul li {
+                margin-bottom: 0.5rem;
+            }
+
+            .footer-section .social-links a {
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-poster-section .poster-content-overlay h2 {
+                font-size: 2rem;
+            }
+
+            .hero-poster-section .poster-content-overlay p {
+                font-size: 1rem;
+            }
+
+            .event-showcase-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .past-events-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</body>
+</html> 

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events - Kings Combat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Mobile Optimizations for event.html */
+        @media (max-width: 768px) {
+            .event-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .event-hero .event-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .event-hero .detail-item span {
+                font-size: 0.9rem;
+            }
+
+            .featured-poster .poster-container {
+                margin: 0 auto;
+                padding: 1rem;
+                flex-direction: column; /* Stack poster image and content */
+                gap: 1.5rem;
+            }
+
+            .featured-poster .poster-content h2 {
+                font-size: 2rem;
+            }
+
+            .featured-poster .poster-subtitle {
+                font-size: 1rem;
+            }
+
+            .featured-poster .poster-details {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .host-message .message-container {
+                margin: 0 auto;
+                padding: 1rem;
+            }
+
+            .host-message .message-header h2 {
+                font-size: 2rem;
+            }
+
+            .host-message .host-title span {
+                font-size: 1rem;
+            }
+
+            .host-message .quote-container {
+                padding: 1.5rem;
+            }
+
+            .host-message .quote-container p {
+                font-size: 1rem;
+                padding-left: 1rem;
+            }
+
+            .host-message .host-achievements {
+                grid-template-columns: 1fr; /* Stack achievements vertically */
+                gap: 1rem;
+            }
+
+            .host-message .achievement h4 {
+                font-size: 1.1rem;
+            }
+
+            .event-schedule h2 {
+                font-size: 2.2rem;
+            }
+
+            .event-schedule .schedule-day h3 {
+                font-size: 1.5rem;
+            }
+
+            .event-schedule .timeline li .time {
+                font-size: 0.9rem;
+            }
+
+            .event-schedule .timeline li .event h4 {
+                font-size: 1.1rem;
+            }
+
+            .event-schedule .timeline li .event p {
+                font-size: 0.9rem;
+            }
+
+            .registration-cta .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .registration-cta .cta-content p {
+                font-size: 1rem;
+            }
+
+            .registration-cta .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .footer-section ul {
+                padding: 0;
+            }
+
+            .footer-section ul li {
+                margin-bottom: 0.5rem;
+            }
+
+            .footer-section .social-links a {
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .event-hero h1 {
+                font-size: 2rem;
+            }
+
+            .event-hero .event-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .featured-poster .poster-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .host-message .message-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .host-message .host-title span {
+                font-size: 0.9rem;
+            }
+
+            .host-message .quote-container p {
+                font-size: 0.9rem;
+            }
+
+            .event-schedule h2 {
+                font-size: 1.8rem;
+            }
+
+            .registration-cta .cta-content h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="images/logo.png" alt="Kings Combat Logo" style="height:38px; width:auto; display:block;">
+                <span style="font-size: 1.7rem; font-family: 'Orbitron', sans-serif; color: #e6c34d; letter-spacing: 2px;">KINGS COMBAT</span>
+            </a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="event.html" class="active">Upcoming Events</a></li>
+            <li><a href="past-events.html">Past Events</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-social">
+            <a href="https://www.instagram.com/kingscombatsports?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100087523166726" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </nav>
+
+    <!-- Event Hero Section -->
+    <section class="event-hero">
+        <div class="event-hero-content">
+            <h1>Kings Combat Event 2025</h1>
+            <p class="event-subtitle">The Ultimate Taekwondo Tournament</p>
+            <div class="event-details">
+                <div class="detail-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>August 23, 2025</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>9400 Lurline Ave Unit A1, Chatsworth, CA 91311</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-trophy"></i>
+                    <span>Elite Competition</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Event Poster -->
+    <section class="featured-poster" style="padding: 4rem 0; margin: 2rem 0;">
+        <div class="poster-container" style="max-width: 800px; margin: 0 auto 0 25%; display: flex; flex-direction: column; align-items: center; gap: 3rem; padding: 0 2rem; background: linear-gradient(135deg, #1a1a1a 0%, #232323 100%); border-radius: 16px;">
+            <div class="poster-content" style="text-align: center; width: 100%;">
+                <h2 style="color: #e6c34d; font-family: 'Orbitron', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">Kings Combat Event 2025</h2>
+                <p class="poster-subtitle" style="color: #ffffff; font-size: 1.2rem; margin-bottom: 2rem;">The Ultimate Taekwondo Tournament</p>
+                <div class="poster-details" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+                    <div class="detail-item" style="display: flex; align-items: center; gap: 1rem;">
+                        <i class="fas fa-calendar" style="color: #e6c34d;"></i>
+                        <span style="color: #ffffff;">August 23, 2025</span>
+                    </div>
+                    <div class="detail-item" style="display: flex; align-items: center; gap: 1rem;">
+                        <i class="fas fa-map-marker-alt" style="color: #e6c34d;"></i>
+                        <span style="color: #ffffff;">9400 Lurline Ave Unit A1, Chatsworth, CA 91311</span>
+                    </div>
+                </div>
+                <a href="registration.html" class="cta-button" style="display: inline-block; padding: 1rem 2rem; background: #e6c34d; color: #1a1a1a; text-decoration: none; border-radius: 8px; font-weight: bold; transition: transform 0.3s, box-shadow 0.3s;">Register Now</a>
+            </div>
+            <div class="poster-image" style="width: 100%; position: relative;">
+                <img src="images/posters/poster1.jpg" alt="Kings Combat Event 2025" style="width: 100%; border-radius: 16px; box-shadow: 0 0 40px rgba(230, 195, 77, 0.3);">
+                <div class="poster-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(230, 195, 77, 0.1) 0%, transparent 100%); border-radius: 16px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Host Message -->
+    <section class="host-message" style="position: relative; padding: 6rem 0; margin: 4rem 0; overflow: hidden;">
+        <div class="message-background" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;"></div>
+        <div class="message-container" style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto 0 25%; padding: 0 2rem; background: linear-gradient(135deg, #1a1a1a 0%, #232323 100%); border-radius: 16px;">
+            <div class="message-header" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="color: #e6c34d; font-family: 'Orbitron', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">Meet Your Host</h2>
+                <div class="host-title" style="color: #ffffff; font-size: 1.2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <span><i class="fas fa-medal" style="color: #e6c34d;"></i> Olympic Athlete</span>
+                    <span><i class="fas fa-trophy" style="color: #e6c34d;"></i> French Champion</span>
+                    <span><i class="fas fa-star" style="color: #e6c34d;"></i> European Medalist</span>
+                </div>
+            </div>
+            
+            <div class="message-content" style="display: flex; flex-direction: column; align-items: center; gap: 4rem;">
+                <div class="host-image" style="position: relative; width: 100%; max-width: 300px;">
+                    <div class="image-frame" style="position: relative; width: 100%; padding-bottom: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 0 40px rgba(230, 195, 77, 0.2);">
+                        <img src="images/host.jpg" alt="Dylan Chellamootoo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="image-decoration" style="position: absolute; top: -20px; left: -20px; right: -20px; bottom: -20px; border: 2px solid #e6c34d; border-radius: 30px; z-index: -1;"></div>
+                </div>
+                
+                <div class="message-text" style="color: #ffffff; width: 100%;">
+                    <div class="quote-container" style="position: relative; padding: 2rem; background: rgba(230, 195, 77, 0.05); border-radius: 20px; margin-bottom: 2rem;">
+                        <i class="fas fa-quote-left" style="position: absolute; top: 1rem; left: 1rem; color: #e6c34d; opacity: 0.3; font-size: 2rem;"></i>
+                        <p style="font-size: 1.2rem; line-height: 1.8; font-style: italic; padding-left: 2rem; text-align: center;">
+                            From trying different sports in my childhood to finding my passion in Taekwondo! My journey began at a Cergy club, where two inspiring coaches shared their love for the sport and competition. It's always a joy to connect with young people and share what I've learned. I was lucky to have people who believed in me… I want to share those lessons with you…
+                        </p>
+                    </div>
+                    
+                    <div class="host-achievements" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem;">
+                        <div class="achievement" style="text-align: center; padding: 1.5rem; background: rgba(230, 195, 77, 0.05); border-radius: 12px;">
+                            <i class="fas fa-medal" style="color: #e6c34d; font-size: 2rem; margin-bottom: 1rem;"></i>
+                            <h4 style="color: #e6c34d; margin-bottom: 0.5rem;">4x European Medalist</h4>
+                            <p style="color: #ffffff; font-size: 0.9rem;">Elite competition success</p>
+                        </div>
+                        <div class="achievement" style="text-align: center; padding: 1.5rem; background: rgba(230, 195, 77, 0.05); border-radius: 12px;">
+                            <i class="fas fa-trophy" style="color: #e6c34d; font-size: 2rem; margin-bottom: 1rem;"></i>
+                            <h4 style="color: #e6c34d; margin-bottom: 0.5rem;">10-time French Champion</h4>
+                            <p style="color: #ffffff; font-size: 0.9rem;">National dominance</p>
+                        </div>
+                        <div class="achievement" style="text-align: center; padding: 1.5rem; background: rgba(230, 195, 77, 0.05); border-radius: 12px;">
+                            <i class="fas fa-star" style="color: #e6c34d; font-size: 2rem; margin-bottom: 1rem;"></i>
+                            <h4 style="color: #e6c34d; margin-bottom: 0.5rem;">Olympic Qualification</h4>
+                            <p style="color: #ffffff; font-size: 0.9rem;">Elite international level</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Schedule -->
+    <section class="event-schedule">
+        <h2>Event Schedule</h2>
+        <div class="schedule-grid">
+            <div class="schedule-day">
+                <h3>August 23, 2025</h3>
+                <ul class="timeline">
+                    <li>
+                        <span class="time">9:00 AM</span>
+                        <div class="event">
+                            <h4>Check-in</h4>
+                            <p>Participant check-in and registration</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">9:30 AM</span>
+                        <div class="event">
+                            <h4>1st Session</h4>
+                            <p>First training session</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">12:00 PM</span>
+                        <div class="event">
+                            <h4>Q & A</h4>
+                            <p>Question and Answer session</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">12:30 PM</span>
+                        <div class="event">
+                            <h4>Lunch</h4>
+                            <p>Lunch break</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">2:00 PM</span>
+                        <div class="event">
+                            <h4>2nd Session</h4>
+                            <p>Second training session</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">4:30 PM</span>
+                        <div class="event">
+                            <h4>Recap, Meet and Greet</h4>
+                            <p>Session recap and meet & greet with instructors and participants</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration CTA -->
+    <section class="registration-cta">
+        <div class="cta-content">
+            <h2>Ready to Join?</h2>
+            <p>Don't miss this opportunity to be part of the most prestigious Taekwondo event of the year.</p>
+            <a href="registration.html" class="cta-button">Register Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> kingscombatevents@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (626) 367-6562</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="event.html">Event Info</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/kingscombatsports?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100087523166726" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kings Combat Events. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
