@@ -25,25 +25,25 @@
     </div>
 
     <!-- Hero Poster Section -->
-    <section class="hero-poster-section" style="position: relative; overflow: hidden; height: 95vh; display: flex; align-items: center; justify-content: center; background: #0a0a0a; animation: poster-entrance 1s ease-out forwards;">
-        <div class="poster-frame" style="position: relative; width: 90%; height: 90%; max-width: 1100px; max-height: 700px; border: 4px solid #e6c34d; border-radius: 20px; box-shadow: 0 0 100px rgba(230, 195, 77, 0.8), 0 0 50px rgba(230, 195, 77, 0.6); overflow: hidden; display: flex; align-items: center; justify-content: center;">
-            <img src="images/posters/poster1.jpg" alt="Kings Combat Event Poster" style="width: 100%; height: 100%; object-fit: contain; display: block; filter: none;">
-            <div class="frame-glow" style="position: absolute; top: -10%; left: -10%; width: 120%; height: 120%; background: radial-gradient(circle at center, rgba(230, 195, 77, 0.15) 0%, transparent 60%); animation: spin 30s linear infinite; opacity: 0.5; z-index: 1;"></div>
+    <section class="hero-poster-section">
+        <div class="poster-frame">
+            <img src="images/posters/poster1.jpg" alt="Kings Combat Event Poster">
+            <div class="frame-glow"></div>
         </div>
-        <div class="poster-overlay-gradient" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0.6)); z-index: 1;"></div>
-        <div class="poster-content-overlay" style="position: relative; z-index: 2; text-align: center; color: #ffffff; max-width: 900px; padding: 20px;">
-            <h2 style="font-family: 'Orbitron', sans-serif; font-size: 3.5rem; color: #e6c34d; margin-bottom: 1rem; text-shadow: 0 0 20px rgba(230, 195, 77, 0.5);">The Arena Awaits</h2>
-            <p style="font-size: 1.5rem; color: #ffffff; margin-bottom: 2rem;">Experience the thrill of the Kings Combat Event 2025</p>
-            <a href="event.html" class="cta-button" style="background: #e6c34d; color: #1a1a1a; text-decoration: none; padding: 1rem 2.5rem; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: transform 0.3s, box-shadow 0.3s;">Event Details</a>
+        <div class="poster-overlay-gradient"></div>
+        <div class="poster-content-overlay">
+            <h2>The Arena Awaits</h2>
+            <p>Experience the thrill of the Kings Combat Event 2025</p>
+            <a href="event.html" class="cta-button">Event Details</a>
         </div>
     </section>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-brand">
-            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-                <img src="images/logo.png" alt="Kings Combat Logo" style="height:38px; width:auto; display:block;">
-                <span style="font-size: 1.7rem; font-family: 'Orbitron', sans-serif; color: #e6c34d; letter-spacing: 2px;">KINGS COMBAT</span>
+            <a href="index.html">
+                <img src="images/logo.png" alt="Kings Combat Logo">
+                <span>KINGS COMBAT</span>
             </a>
         </div>
         <div class="nav-toggle" id="navToggle">
@@ -66,76 +66,17 @@
     </nav>
 
     <!-- New Event Showcase Section -->
-    <section class="event-showcase-section" style="
-        position: relative;
-        padding: 5rem 2rem;
-        background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
-        text-align: center;
-        overflow: hidden;
-        margin-top: -5vh; /* Overlap slightly with poster section */
-    ">
-        <div class="grid-overlay" style="
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image:
-                linear-gradient(0deg, transparent 24%, rgba(30, 255, 255, 0.05) 25%, rgba(30, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(30, 255, 255, 0.05) 75%, rgba(30, 255, 255, 0.05) 76%, transparent 77%, transparent),
-                linear-gradient(90deg, transparent 24%, rgba(30, 255, 255, 0.05) 25%, rgba(30, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(30, 255, 255, 0.05) 75%, rgba(30, 255, 255, 0.05) 76%, transparent 77%, transparent);
-            background-size: 50px 50px;
-            z-index: 0;
-            opacity: 0.2;
-            animation: moveGrid 20s linear infinite;
-        "></div>
-        <h2 style="
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.2rem;
-            color: #66e6ff; /* Neon blue */
-            margin-bottom: 2.5rem;
-            text-shadow: 0 0 25px rgba(102, 230, 255, 0.7), 0 0 10px rgba(102, 230, 255, 0.5);
-            position: relative; z-index: 1;
-        ">ULTRA EVENT: REGISTER NOW!</h2>
+    <section class="event-showcase-section">
+        <div class="grid-overlay"></div>
+        <h2>ULTRA EVENT: REGISTER NOW!</h2>
 
-        <div class="event-details-flex" style="
-            display: flex;
-            flex-direction: column; /* Default to column for small screens */
-            align-items: center;
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative; z-index: 1;
-        ">
-            <img src="images/host.jpg" alt="Dylan's Picture" style="
-                width: 100%;
-                max-width: 400px;
-                height: auto;
-                border-radius: 15px;
-                box-shadow: 0 0 40px rgba(255, 255, 255, 0.2), 0 0 80px rgba(102, 230, 255, 0.5);
-                filter: brightness(1.1) contrast(1.1);
-                transition: transform 0.3s ease-in-out;
-            " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="event-details-flex">
+            <img src="images/host.jpg" alt="Dylan's Picture" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
 
-            <div class="event-info-text" style="
-                text-align: left;
-                color: #e0e0e0;
-                font-size: 1.25rem;
-                line-height: 1.7;
-                max-width: 500px;
-            ">
-                <p style="margin-bottom: 1.5rem;">Prepare for the ultimate clash of titans at the next Kings Combat event! Witness unparalleled Taekwondo skill, precision, and raw power as elite athletes battle for supremacy.</p>
-                <p style="margin-bottom: 2.5rem;">This is more than just a competition; it's a spectacle of martial arts mastery, a testament to dedication, and a platform where legends are forged. Don't miss your chance to be part of history!</p>
-                <a href="registration.html" class="cta-button" style="
-                    display: inline-block;
-                    padding: 1.2rem 3rem;
-                    background: linear-gradient(45deg, #ffc107, #ffeb3b); /* Gold/Yellow gradient */
-                    color: #1a1a1a;
-                    text-decoration: none;
-                    border-radius: 50px; /* More rounded, futuristic button */
-                    font-weight: bold;
-                    font-size: 1.3rem;
-                    transition: transform 0.3s, box-shadow 0.3s;
-                    box-shadow: 0 0 20px rgba(255, 235, 59, 0.6);
-                    position: relative;
-                    overflow: hidden;
-                " onmouseover="this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 0 30px rgba(255, 235, 59, 0.8), 0 0 15px rgba(255, 235, 59, 0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 20px rgba(255, 235, 59, 0.6)'">
+            <div class="event-info-text">
+                <p>Prepare for the ultimate clash of titans at the next Kings Combat event! Witness unparalleled Taekwondo skill, precision, and raw power as elite athletes battle for supremacy.</p>
+                <p>This is more than just a competition; it's a spectacle of martial arts mastery, a testament to dedication, and a platform where legends are forged. Don't miss your chance to be part of history!</p>
+                <a href="registration.html" class="cta-button" onmouseover="this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 0 30px rgba(255, 235, 59, 0.8), 0 0 15px rgba(255, 235, 59, 0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 20px rgba(255, 235, 59, 0.6)'">
                     Secure Your Spot!
                 </a>
             </div>
@@ -143,46 +84,10 @@
     </section>
 
     <!-- Past Events Section -->
-    <section class="past-events-section" style="
-        position: relative;
-        padding: 6rem 2rem;
-        background: #0a0a0a;
-        text-align: center;
-        overflow: hidden;
-        border-top: 2px solid rgba(102, 230, 255, 0.2); /* Neon border */
-    ">
-        <h2 style="
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
-            color: #ff33cc; /* Neon pink/magenta */
-            margin-bottom: 1.5rem;
-            text-shadow: 0 0 20px rgba(255, 51, 204, 0.7), 0 0 8px rgba(255, 51, 204, 0.5);
-            position: relative; z-index: 1;
-        ">RELIVE THE GLORY</h2>
-        <p style="
-            color: #ffffff;
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            line-height: 1.6;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative; z-index: 1;
-        ">Journey through the annals of Kings Combat history. Witness the epic battles, the triumphs, and the moments that defined our legacy.</p>
-        <a href="past-events.html" class="cta-button" style="
-            display: inline-block;
-            padding: 1.2rem 3.5rem;
-            background: linear-gradient(45deg, #00ffff, #00bcd4); /* Cyan/Aqua gradient */
-            color: #1a1a1a;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.3rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
-            position: relative;
-            overflow: hidden;
-        " onmouseover="this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 0 30px rgba(0, 255, 255, 0.8), 0 0 15px rgba(0, 255, 255, 0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 20px rgba(0, 255, 255, 0.6)'">
+    <section class="past-events-section">
+        <h2>RELIVE THE GLORY</h2>
+        <p>Journey through the annals of Kings Combat history. Witness the epic battles, the triumphs, and the moments that defined our legacy.</p>
+        <a href="past-events.html" class="cta-button" onmouseover="this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 0 30px rgba(0, 255, 255, 0.8), 0 0 15px rgba(0, 255, 255, 0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 20px rgba(0, 255, 255, 0.6)'">
             View Past Events
         </a>
     </section>
@@ -251,24 +156,289 @@
             to { background-position: 50px 50px; }
         }
 
+        /* Base styles for sections previously with inline styles */
+        .hero-poster-section {
+            position: relative;
+            overflow: hidden;
+            height: 95vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a0a;
+            animation: poster-entrance 1s ease-out forwards;
+        }
+
+        .hero-poster-section .poster-frame {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            max-width: 1100px;
+            max-height: 700px;
+            border: 4px solid #e6c34d;
+            border-radius: 20px;
+            box-shadow: 0 0 100px rgba(230, 195, 77, 0.8), 0 0 50px rgba(230, 195, 77, 0.6);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-poster-section .poster-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            filter: none;
+        }
+
+        .hero-poster-section .frame-glow {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle at center, rgba(230, 195, 77, 0.15) 0%, transparent 60%);
+            animation: spin 30s linear infinite;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .hero-poster-section .poster-overlay-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0.6));
+            z-index: 1;
+        }
+
+        .hero-poster-section .poster-content-overlay {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #ffffff;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .hero-poster-section .poster-content-overlay h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            color: #e6c34d;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(230, 195, 77, 0.5);
+        }
+
+        .hero-poster-section .poster-content-overlay p {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .hero-poster-section .cta-button {
+            background: #e6c34d;
+            color: #1a1a1a;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .navbar .nav-brand a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .navbar .nav-brand img {
+            height:38px;
+            width:auto;
+            display:block;
+        }
+
+        .navbar .nav-brand span {
+            font-size: 1.7rem;
+            font-family: 'Orbitron', sans-serif;
+            color: #e6c34d;
+            letter-spacing: 2px;
+        }
+
+        .event-showcase-section {
+            position: relative;
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+            text-align: center;
+            overflow: hidden;
+            margin-top: -5vh; /* Overlap slightly with poster section */
+        }
+
+        .event-showcase-section .grid-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(0deg, transparent 24%, rgba(30, 255, 255, 0.05) 25%, rgba(30, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(30, 255, 255, 0.05) 75%, rgba(30, 255, 255, 0.05) 76%, transparent 77%, transparent),
+                linear-gradient(90deg, transparent 24%, rgba(30, 255, 255, 0.05) 25%, rgba(30, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(30, 255, 255, 0.05) 75%, rgba(30, 255, 255, 0.05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+            z-index: 0;
+            opacity: 0.2;
+            animation: moveGrid 20s linear infinite;
+        }
+
+        .event-showcase-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.2rem;
+            color: #66e6ff; /* Neon blue */
+            margin-bottom: 2.5rem;
+            text-shadow: 0 0 25px rgba(102, 230, 255, 0.7), 0 0 10px rgba(102, 230, 255, 0.5);
+            position: relative; z-index: 1;
+        }
+
+        .event-showcase-section .event-details-flex {
+            display: flex;
+            flex-direction: column; /* Default to column for small screens */
+            align-items: center;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative; z-index: 1;
+        }
+
+        .event-showcase-section .event-details-flex img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.2), 0 0 80px rgba(102, 230, 255, 0.5);
+            filter: brightness(1.1) contrast(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .event-showcase-section .event-info-text {
+            text-align: left;
+            color: #e0e0e0;
+            font-size: 1.25rem;
+            line-height: 1.7;
+            max-width: 500px;
+        }
+
+        .event-showcase-section .event-info-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .event-showcase-section .event-info-text p:last-of-type {
+            margin-bottom: 2.5rem;
+        }
+
+        .event-showcase-section .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(45deg, #ffc107, #ffeb3b); /* Gold/Yellow gradient */
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 50px; /* More rounded, futuristic button */
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 20px rgba(255, 235, 59, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .past-events-section {
+            position: relative;
+            padding: 6rem 2rem;
+            background: #0a0a0a;
+            text-align: center;
+            overflow: hidden;
+            border-top: 2px solid rgba(102, 230, 255, 0.2); /* Neon border */
+        }
+
+        .past-events-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            color: #ff33cc; /* Neon pink/magenta */
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(255, 51, 204, 0.7), 0 0 8px rgba(255, 51, 204, 0.5);
+            position: relative; z-index: 1;
+        }
+
+        .past-events-section p {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative; z-index: 1;
+        }
+
+        .past-events-section .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3.5rem;
+            background: linear-gradient(45deg, #00ffff, #00bcd4); /* Cyan/Aqua gradient */
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
         /* Mobile Optimizations for index.html */
         @media (max-width: 768px) {
+            .hero-poster-section {
+                flex-direction: column;
+                padding: 20px;
+                height: auto; /* Allow height to adjust based on content */
+                min-height: 80vh; /* Ensure some minimum height */
+            }
+
+            .hero-poster-section .poster-frame {
+                width: 90%; /* Adjusted width for mobile to have some side padding */
+                max-width: 400px; /* Limit max width for image frame */
+                height: auto; /* Let content dictate height, or image itself */
+                margin: 0 auto 2rem auto; /* Center and add bottom margin */
+                box-sizing: border-box; /* Include padding and border in element's total width and height */
+            }
+
+            .hero-poster-section .poster-frame img {
+                object-fit: contain; /* Ensure the entire image is visible */
+                width: 100%;
+                height: 100%; /* Important for object-fit to work within the frame */
+            }
+
+            .hero-poster-section .poster-content-overlay {
+                padding: 10px;
+                max-width: 100%;
+                width: 100%; /* Ensure it takes full width */
+                text-align: center; /* Explicitly center text */
+                box-sizing: border-box; /* Include padding in width */
+            }
+
             .hero-poster-section .poster-content-overlay h2 {
-                font-size: 2.5rem; /* Smaller font size for mobile hero title */
+                font-size: 2rem;
             }
 
             .hero-poster-section .poster-content-overlay p {
-                font-size: 1.1rem; /* Smaller font size for mobile hero subtitle */
+                font-size: 1rem;
             }
 
             .hero-poster-section .cta-button {
-                padding: 0.8rem 2rem; /* Smaller padding for mobile CTA button */
+                padding: 0.8rem 2rem;
                 font-size: 1rem;
             }
 
             .navbar .nav-brand span {
-                font-size: 1.2rem; /* Smaller brand text on mobile */
-                letter-spacing: 1px;
+                font-size: 1.2rem;
+                letter-spacing: 0.5px; /* Reduced letter-spacing for better mobile readability */
             }
 
             .navbar .nav-menu {
@@ -277,9 +447,9 @@
                 top: 70px;
                 left: 0;
                 width: 100%;
-                background: #1a1a1a; /* Dark background for mobile menu */
+                background: #1a1a1a;
                 border-top: 1px solid #e6c34d;
-                display: none; /* Hidden by default */
+                display: none;
                 z-index: 1000;
             }
 
@@ -299,35 +469,59 @@
             }
 
             .navbar .nav-toggle {
-                display: block; /* Show hamburger icon on mobile */
+                display: block;
             }
 
             .navbar .nav-social {
-                display: none; /* Hide social icons on mobile nav for cleaner look */
+                display: none;
+            }
+
+            .event-showcase-section {
+                padding: 3rem 1rem;
+                box-sizing: border-box; /* Ensure padding is included */
             }
 
             .event-showcase-section h2 {
-                font-size: 2.2rem; /* Adjust font size for event showcase title */
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
             }
 
             .event-showcase-section .event-details-flex {
-                flex-direction: column; /* Stack image and text vertically */
+                gap: 2rem;
+                flex-wrap: wrap; /* Allow items to wrap if needed */
+                justify-content: center; /* Center items when wrapped */
+            }
+
+            .event-showcase-section .event-details-flex img {
+                max-width: 90%; /* Adjust image width to fit better */
             }
 
             .event-showcase-section .event-info-text {
-                text-align: center; /* Center align text on mobile */
+                font-size: 1rem;
+                text-align: center;
+                max-width: 90%; /* Limit text width */
+            }
+
+            .event-showcase-section .cta-button {
+                font-size: 1.1rem;
+                padding: 1rem 2rem;
+            }
+
+            .past-events-section {
+                padding: 4rem 1rem;
+                box-sizing: border-box; /* Ensure padding is included */
             }
 
             .past-events-section h2 {
-                font-size: 2.2rem; /* Adjust font size for past events title */
+                font-size: 1.8rem;
             }
 
             .past-events-section p {
-                font-size: 1rem; /* Adjust font size for past events paragraph */
+                font-size: 1rem;
             }
 
             .past-events-section .cta-button {
-                padding: 1rem 2.5rem; /* Adjust padding for past events CTA */
+                padding: 1rem 2.5rem;
                 font-size: 1.1rem;
             }
 
@@ -355,19 +549,25 @@
 
         @media (max-width: 480px) {
             .hero-poster-section .poster-content-overlay h2 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
 
             .hero-poster-section .poster-content-overlay p {
-                font-size: 1rem;
+                font-size: 0.85rem;
             }
 
             .event-showcase-section h2 {
-                font-size: 1.8rem;
+                font-size: 1.3rem;
             }
 
             .past-events-section h2 {
-                font-size: 1.8rem;
+                font-size: 1.3rem;
+            }
+        }
+        /* Global mobile fix to prevent horizontal overflow */
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
             }
         }
     </style>
