@@ -416,4 +416,68 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-}); 
+});
+
+// --- Mobile Carousel for 2nd Slide (Event Highlights) ---
+function initMobileCarousels() {
+    if (window.innerWidth > 768) return; // Only activate on mobile
+    
+    // For each modal
+    ['pastEvent2Modal', 'pastEvent3Modal'].forEach(modalId => {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+        // Find the 2nd slide (Event Highlights)
+        const slides = modal.querySelectorAll('.modal-slide');
+        if (slides.length < 2) return;
+        const eventHighlightsSlide = slides[1];
+        const carousel = eventHighlightsSlide.querySelector('.mobile-carousel');
+        const images = carousel ? carousel.querySelectorAll('.carousel-img') : [];
+        const dotsContainer = eventHighlightsSlide.querySelector('.mobile-carousel-dots');
+        if (!carousel || images.length === 0 || !dotsContainer) return;
+
+        // Remove any existing dots
+        dotsContainer.innerHTML = '';
+        // Create dots
+        images.forEach((img, idx) => {
+            const dot = document.createElement('span');
+            dot.className = 'mobile-carousel-dot' + (idx === 0 ? ' active' : '');
+            dot.addEventListener('click', () => setActiveImage(idx));
+            dotsContainer.appendChild(dot);
+        });
+
+        // Show only the first image by default
+        function setActiveImage(idx) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === idx);
+            });
+            const dots = dotsContainer.querySelectorAll('.mobile-carousel-dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === idx);
+            });
+            carousel.dataset.active = idx;
+        }
+        setActiveImage(0);
+
+        // Optionally, add swipe support (left/right)
+        let startX = null;
+        carousel.addEventListener('touchstart', e => {
+            if (e.touches.length === 1) startX = e.touches[0].clientX;
+        });
+        carousel.addEventListener('touchend', e => {
+            if (startX === null) return;
+            const endX = e.changedTouches[0].clientX;
+            const delta = endX - startX;
+            let idx = parseInt(carousel.dataset.active || '0', 10);
+            if (delta > 40 && idx > 0) setActiveImage(idx - 1);
+            else if (delta < -40 && idx < images.length - 1) setActiveImage(idx + 1);
+            startX = null;
+        });
+
+        // Reset to first image when modal opens or slide changes
+        const observer = new MutationObserver(() => setActiveImage(0));
+        observer.observe(modal, { attributes: true, attributeFilter: ['style'] });
+    });
+}
+
+window.addEventListener('DOMContentLoaded', initMobileCarousels);
+window.addEventListener('resize', initMobileCarousels); 
