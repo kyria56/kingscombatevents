@@ -11,9 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-brand">
-            <a href="index.html">KINGS COMBAT</a>
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="images/logo.png" alt="Kings Combat Logo" style="height:38px; width:auto; display:block;">
+                <span style="font-size: 1.7rem; font-family: 'Orbitron', sans-serif; color: #e6c34d; letter-spacing: 2px;">KINGS COMBAT</span>
+            </a>
         </div>
         <div class="nav-toggle" id="navToggle">
             <span></span>
@@ -22,11 +26,16 @@
         </div>
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="seminar.html" class="active">Sparring Seminar</a></li>
+            <li><a href="event.html">Upcoming Events</a></li>
+            <li><a href="past-events.html">Past Events</a></li>
             <li><a href="registration.html">Registration</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="nav-social">
+            <a href="https://www.instagram.com/kingscombatsports?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100087523166726" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
     </nav>
 
     <main class="seminar-page">
@@ -189,6 +198,10 @@
 
             .seminar-info, .seminar-details {
                 width: 100%;
+            }
+
+            .seminar-info, .seminar-details {
+                padding: 1.5rem;
             }
 
             .info-card, .pricing-card, .details-card, .instructor-card {
