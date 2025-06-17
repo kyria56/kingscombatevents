@@ -288,4 +288,74 @@ if (paymentMethodSelect) {
 
     // Initial display based on default selected value (if any)
     showPaymentInstructions(paymentMethodSelect.value);
-} 
+}
+
+// Image Gallery Modal Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const openGalleryBtn = document.getElementById('openPastEventsGalleryBtn');
+    const imageGalleryModal = document.getElementById('imageGalleryModal');
+    const closeGalleryBtn = document.querySelector('.image-gallery-close');
+    const galleryImage = document.getElementById('galleryImage');
+    const prevArrow = document.querySelector('.prev-arrow');
+    const nextArrow = document.querySelector('.next-arrow');
+
+    const images = ['images/posters/poster2.jpg', 'images/posters/poster3.jpg'];
+    let currentImageIndex = 0;
+
+    // Function to open the modal
+    if (openGalleryBtn) {
+        openGalleryBtn.addEventListener('click', () => {
+            imageGalleryModal.style.display = 'flex'; // Use flex to center content
+            currentImageIndex = 0; // Start with the first image
+            galleryImage.src = images[currentImageIndex];
+            document.body.style.overflow = 'hidden'; // Prevent scrolling on the body
+        });
+    }
+
+    // Function to close the modal
+    if (closeGalleryBtn) {
+        closeGalleryBtn.addEventListener('click', () => {
+            imageGalleryModal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling on the body
+        });
+    }
+
+    // Close modal if clicked outside content
+    if (imageGalleryModal) {
+        imageGalleryModal.addEventListener('click', (e) => {
+            if (e.target === imageGalleryModal) {
+                imageGalleryModal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // Navigate images
+    const showImage = (index) => {
+        galleryImage.src = images[index];
+    };
+
+    if (prevArrow) {
+        prevArrow.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent modal from closing when clicking arrows
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        });
+    }
+
+    if (nextArrow) {
+        nextArrow.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent modal from closing when clicking arrows
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        });
+    }
+
+    // Close with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && imageGalleryModal.style.display === 'flex') {
+            imageGalleryModal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+}); 
