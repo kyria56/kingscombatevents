@@ -1029,54 +1029,59 @@
         /* Mobile responsiveness for multi-slide modal */
         @media (max-width: 768px) {
             .image-gallery-modal-content {
-                max-width: 95%;
-                max-height: 95vh; /* Adjust for mobile viewport */
-                padding: 10px;
+                max-width: 98%;
+                max-height: 98vh;
+                padding: 6vw 2vw;
             }
             .modal-slide .slide-title {
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
+                font-size: 1.2rem;
+                margin-bottom: 0.7rem;
             }
             .modal-slide .modal-main-image {
-                max-width: 90%;
+                max-width: 98%;
+                max-height: 35vh;
             }
             .gallery-images-container {
                 flex-direction: column;
-                gap: 10px;
+                gap: 12px;
+                width: 100%;
+                align-items: center;
             }
             .gallery-images-container img {
                 width: 100%;
                 height: auto;
+                border-radius: 10px;
+                margin-bottom: 0.5rem;
             }
             .host-details .host-image {
-                width: 100px;
-                height: 100px;
+                width: 90px;
+                height: 90px;
             }
             .host-details h4 {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
             .host-details p {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
             .prev-slide-arrow, .next-slide-arrow {
-                font-size: 16px;
-                padding: 10px;
-                width: 40px;
-                height: 40px;
+                font-size: 15px;
+                padding: 8px;
+                width: 36px;
+                height: 36px;
             }
-            .prev-slide-arrow { left: 5px; }
-            .next-slide-arrow { right: 5px; }
+            .prev-slide-arrow { left: 2px; }
+            .next-slide-arrow { right: 2px; }
             .modal-pagination {
-                bottom: 30px;
-                gap: 8px;
+                bottom: 18px;
+                gap: 7px;
             }
             .dot {
-                height: 12px;
-                width: 12px;
+                height: 10px;
+                width: 10px;
             }
             .modal-description {
-                font-size: 0.9rem;
-                margin-top: 10px;
+                font-size: 0.85rem;
+                margin-top: 8px;
             }
         }
     </style>
