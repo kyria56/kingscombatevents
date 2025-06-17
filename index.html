@@ -87,9 +87,9 @@
     <section class="past-events-section">
         <h2>RELIVE THE GLORY</h2>
         <p>Journey through the annals of Kings Combat history. Witness the epic battles, the triumphs, and the moments that defined our legacy.</p>
-        <a href="past-events.html" class="cta-button" onmouseover="this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 0 30px rgba(0, 255, 255, 0.8), 0 0 15px rgba(0, 255, 255, 0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 20px rgba(0, 255, 255, 0.6)'">
+        <button id="openPastEventsGalleryBtn" class="cta-button">
             View Past Events
-        </a>
+        </button>
     </section>
 
     <!-- Footer -->
@@ -132,6 +132,16 @@
         <div class="video-modal-content">
             <span class="video-modal-close">&times;</span>
             <div id="videoDynamicContent"></div>
+        </div>
+    </div>
+
+    <!-- Image Gallery Modal -->
+    <div id="imageGalleryModal" class="image-gallery-modal">
+        <div class="image-gallery-modal-content">
+            <span class="image-gallery-close">&times;</span>
+            <img id="galleryImage" src="" alt="Past Event Image">
+            <a class="prev-arrow">&#10094;</a>
+            <a class="next-arrow">&#10095;</a>
         </div>
     </div>
 
@@ -569,6 +579,122 @@
             body {
                 overflow-x: hidden;
             }
+        }
+
+        /* Image Gallery Modal Styles */
+        .image-gallery-modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 2000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            -webkit-backdrop-filter: blur(10px); /* Safari */
+            backdrop-filter: blur(10px);
+        }
+
+        .image-gallery-modal-content {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a); /* Dark futuristic background */
+            border: 2px solid #e6c34d; /* Gold border */
+            border-radius: 15px;
+            box-shadow: 0 0 50px rgba(230, 195, 77, 0.5); /* Glowing effect */
+        }
+
+        .image-gallery-modal-content img {
+            width: 100%;
+            max-height: 70vh; /* Limit image height */
+            object-fit: contain; /* Ensure entire image is visible */
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .image-gallery-close {
+            color: #e6c34d;
+            font-size: 40px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 2001;
+        }
+
+        .image-gallery-close:hover,
+        .image-gallery-close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .prev-arrow, .next-arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: #e6c34d;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+            border-radius: 50%; /* Make them circular */
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .prev-arrow { left: 10px; }
+        .next-arrow { right: 10px; border-radius: 3px 0 0 3px; }
+
+        .prev-arrow:hover, .next-arrow:hover {
+            background-color: rgba(230, 195, 77, 0.8);
+            color: #1a1a1a;
+        }
+
+        /* Mobile responsiveness for the image gallery modal */
+        @media (max-width: 768px) {
+            .image-gallery-modal-content {
+                max-width: 95%;
+                padding: 10px;
+            }
+            .image-gallery-modal-content img {
+                max-height: 60vh;
+                margin-bottom: 10px;
+            }
+            .image-gallery-close {
+                font-size: 30px;
+                top: 5px;
+                right: 10px;
+            }
+            .prev-arrow, .next-arrow {
+                font-size: 16px;
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+                margin-top: -30px;
+            }
+            .prev-arrow { left: 5px; }
+            .next-arrow { right: 5px; }
         }
     </style>
 </body>
