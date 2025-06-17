@@ -165,9 +165,12 @@
                     <div class="modal-slide">
                         <h3 class="slide-title">Farzad Mansouri: Event Highlights</h3>
                         <div class="gallery-images-container">
-                            <img src="images/poster2/placeholder1.jpg" alt="Farzad Mansouri Event Image 1">
-                            <img src="images/poster2/placeholder2.jpg" alt="Farzad Mansouri Event Image 2">
-                            <img src="images/poster2/placeholder3.jpg" alt="Farzad Mansouri Event Image 3">
+                            <div class="mobile-carousel">
+                                <img src="images/poster2/placeholder1.jpg" alt="Farzad Mansouri Event Image 1" class="carousel-img">
+                                <img src="images/poster2/placeholder2.jpg" alt="Farzad Mansouri Event Image 2" class="carousel-img">
+                                <img src="images/poster2/placeholder3.jpg" alt="Farzad Mansouri Event Image 3" class="carousel-img">
+                            </div>
+                            <div class="mobile-carousel-dots"></div>
                         </div>
                     </div>
                     <!-- Slide 3: Host Info -->
@@ -209,9 +212,12 @@
                     <div class="modal-slide">
                         <h3 class="slide-title">Milad Beigi: Event Highlights</h3>
                         <div class="gallery-images-container">
-                            <img src="images/past3/img1.jpg" alt="Milad Beigi Event Image 1">
-                            <img src="images/past3/img2.jpg" alt="Milad Beigi Event Image 2">
-                            <img src="images/past3/img3.jpg" alt="Milad Beigi Event Image 3">
+                            <div class="mobile-carousel">
+                                <img src="images/past3/img1.jpg" alt="Milad Beigi Event Image 1" class="carousel-img">
+                                <img src="images/past3/img2.jpg" alt="Milad Beigi Event Image 2" class="carousel-img">
+                                <img src="images/past3/img3.jpg" alt="Milad Beigi Event Image 3" class="carousel-img">
+                            </div>
+                            <div class="mobile-carousel-dots"></div>
                         </div>
                     </div>
                     <!-- Slide 3: Host Info -->
@@ -1083,6 +1089,53 @@
             .modal-description {
                 font-size: 0.85rem;
                 margin-top: 8px;
+            }
+        }
+
+        /* Add to the mobile media query */
+        @media (max-width: 768px) {
+            .gallery-images-container {
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                align-items: center;
+                padding: 0;
+            }
+            .mobile-carousel {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            .carousel-img {
+                display: none;
+                width: 100%;
+                max-width: 320px;
+                height: auto;
+                border-radius: 10px;
+                margin: 0 auto;
+            }
+            .carousel-img.active {
+                display: block;
+            }
+            .mobile-carousel-dots {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 10px;
+            }
+            .mobile-carousel-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #888;
+                opacity: 0.6;
+                transition: background 0.2s, opacity 0.2s;
+            }
+            .mobile-carousel-dot.active {
+                background: #e6c34d;
+                opacity: 1;
             }
         }
     </style>
