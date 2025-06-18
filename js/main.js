@@ -398,34 +398,25 @@ function initMobileCarousels() {
 window.addEventListener('DOMContentLoaded', initMobileCarousels);
 window.addEventListener('resize', initMobileCarousels);
 
-// --- Highlight Image Lightbox ---
+// --- Highlight Image Native Dialog Lightbox ---
 document.addEventListener('DOMContentLoaded', () => {
-    const lightbox = document.getElementById('highlightLightbox');
-    const lightboxImg = document.getElementById('highlightLightboxImg');
-    const lightboxClose = document.querySelector('.highlight-lightbox-close');
-    // Listen for clicks on highlight images
-    document.querySelectorAll('.combined-highlights-grid img').forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('active');
-        });
+    const dialog = document.getElementById('highlightLightboxDialog');
+    const dialogImg = document.getElementById('highlightDialogImg');
+    const dialogClose = document.querySelector('.highlight-dialog-close');
+    // Use event delegation for highlight images
+    document.body.addEventListener('click', function(e) {
+        if (e.target.matches('.combined-highlights-grid img')) {
+            dialogImg.src = e.target.src;
+            dialogImg.alt = e.target.alt;
+            dialog.showModal();
+        }
     });
     // Close logic
-    lightboxClose.addEventListener('click', () => {
-        lightbox.classList.remove('active');
-        lightboxImg.src = '';
+    dialogClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        dialog.close();
     });
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.classList.remove('active');
-            lightboxImg.src = '';
-        }
-    });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-            lightbox.classList.remove('active');
-            lightboxImg.src = '';
-        }
+    dialog.addEventListener('close', () => {
+        dialogImg.src = '';
     });
 }); 
