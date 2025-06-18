@@ -290,125 +290,41 @@ if (paymentMethodSelect) {
     showPaymentInstructions(paymentMethodSelect.value);
 }
 
-// Multi-Slide Modals Logic for Past Events
+// --- Combined Modal Logic for Past Events (No Slides) ---
 document.addEventListener('DOMContentLoaded', () => {
     const modals = [
-        {
-            openBtnId: 'openPoster2ModalBtn',
-            modalId: 'pastEvent2Modal',
-            descriptions: [
-                'This is the official event poster.',
-                'These are highlights from the event.',
-                'This is information about the host.'
-            ]
-        },
-        {
-            openBtnId: 'openPoster3ModalBtn',
-            modalId: 'pastEvent3Modal',
-            descriptions: [
-                'This is the official event poster.',
-                'These are highlights from the event.',
-                'This is information about the host.'
-            ]
-        }
+        { openBtnId: 'openPoster2ModalBtn', modalId: 'pastEvent2Modal' },
+        { openBtnId: 'openPoster3ModalBtn', modalId: 'pastEvent3Modal' }
     ];
+    modals.forEach(({ openBtnId, modalId }) => {
+        const openBtn = document.getElementById(openBtnId);
+        const modal = document.getElementById(modalId);
+        if (!openBtn || !modal) return;
+        const closeBtn = modal.querySelector('.image-gallery-close');
 
-    modals.forEach(eventModal => {
-        const openBtn = document.getElementById(eventModal.openBtnId);
-        const modal = document.getElementById(eventModal.modalId);
-        
-        if (openBtn && modal) {
-            const closeBtn = modal.querySelector('.image-gallery-close');
-            const slidesContainer = modal.querySelector('.modal-slides-container');
-            const prevArrow = modal.querySelector('.prev-slide-arrow');
-            const nextArrow = modal.querySelector('.next-slide-arrow');
-            const dots = modal.querySelectorAll('.modal-pagination .dot');
-            const descriptionEl = modal.querySelector('.modal-description');
-
-            let currentSlide = 0;
-
-            const showSlide = (index) => {
-                currentSlide = (index + slidesContainer.children.length) % slidesContainer.children.length;
-                slidesContainer.style.transform = `translateX(-${currentSlide * 100 / slidesContainer.children.length}%)`;
-                updatePagination();
-                updateDescription();
-            };
-
-            const updatePagination = () => {
-                dots.forEach((dot, index) => {
-                    if (index === currentSlide) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                });
-            };
-
-            const updateDescription = () => {
-                if (descriptionEl) {
-                    descriptionEl.textContent = eventModal.descriptions[currentSlide];
-                }
-            };
-
-            // Open Modal
-            openBtn.addEventListener('click', () => {
-                currentSlide = 0; // Explicitly set currentSlide to 0
-                
-                // Temporarily disable transition, set transform, force reflow, then re-enable transition
-                slidesContainer.style.transition = 'none';
-                slidesContainer.style.transform = `translateX(-${currentSlide * 100 / slidesContainer.children.length}%)`;
-                void slidesContainer.offsetWidth; // Force reflow/repaint
-
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-                updatePagination(); // Update pagination dots immediately
-                updateDescription(); // Update description immediately
-
-                // Re-enable transition after a very short delay to allow the initial render to complete
-                setTimeout(() => {
-                    slidesContainer.style.transition = 'transform 0.5s ease-in-out';
-                }, 50);
-            });
-
-            // Close Modal
-            closeBtn.addEventListener('click', () => {
+        // Open modal
+        openBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+        // Close modal (button)
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+        // Close modal (click outside content)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
                 modal.style.display = 'none';
                 document.body.style.overflow = '';
-            });
-
-            // Close if clicked outside content
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = '';
-                }
-            });
-
-            // Navigation Arrows
-            prevArrow.addEventListener('click', (e) => {
-                e.stopPropagation();
-                showSlide(currentSlide - 1);
-            });
-            nextArrow.addEventListener('click', (e) => {
-                e.stopPropagation();
-                showSlide(currentSlide + 1);
-            });
-
-            // Pagination Dots
-            dots.forEach(dot => {
-                dot.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    showSlide(parseInt(dot.dataset.slide));
-                });
-            });
-        }
+            }
+        });
     });
-
-    // Close with Escape key for all modals (if active)
+    // Close with Escape key for all modals
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            modals.forEach(eventModal => {
-                const modal = document.getElementById(eventModal.modalId);
+            modals.forEach(({ modalId }) => {
+                const modal = document.getElementById(modalId);
                 if (modal && modal.style.display === 'flex') {
                     modal.style.display = 'none';
                     document.body.style.overflow = '';
@@ -480,4 +396,36 @@ function initMobileCarousels() {
 }
 
 window.addEventListener('DOMContentLoaded', initMobileCarousels);
-window.addEventListener('resize', initMobileCarousels); 
+window.addEventListener('resize', initMobileCarousels);
+
+// --- Highlight Image Lightbox ---
+document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('highlightLightbox');
+    const lightboxImg = document.getElementById('highlightLightboxImg');
+    const lightboxClose = document.querySelector('.highlight-lightbox-close');
+    // Listen for clicks on highlight images
+    document.querySelectorAll('.combined-highlights-grid img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+        });
+    });
+    // Close logic
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+    });
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+            lightboxImg.src = '';
+        }
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+            lightboxImg.src = '';
+        }
+    });
+}); 
