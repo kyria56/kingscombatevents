@@ -15,7 +15,7 @@
     <div class="loading-screen">
         <div class="loader">
             <div class="loader-content">
-                <h1>KINGS COMBAT</h1>
+                <h1>KINGS COMBAT EVENTS</h1>
                 <div class="loader-bar">
                     <div class="loader-progress"></div>
                 </div>
@@ -32,8 +32,12 @@
         </div>
         <div class="poster-overlay-gradient"></div>
         <div class="poster-content-overlay">
-            <h2>The Arena Awaits</h2>
-            <p>Experience the thrill of the Kings Combat Event 2025</p>
+            <h2>Our Mission At Kings Combat Sports Events:</h2>
+            <p>
+                At 👑 Kings Combat Sports Events, we empower and inspire young athletes through world-class Taekwondo instruction from current and former champions.
+                <br><br>
+                We create a win-win-win: athletes gain invaluable skills and confidence, our talented instructors share their expertise, and parents enjoy accessible, affordable, high-quality training.
+            </p>
             <a href="event.html" class="cta-button">Event Details</a>
         </div>
     </section>
@@ -43,7 +47,7 @@
         <div class="nav-brand">
             <a href="index.html">
                 <img src="images/logo.png" alt="Kings Combat Logo">
-                <span>KINGS COMBAT</span>
+                <span>KINGS COMBAT EVENTS</span>
             </a>
         </div>
         <div class="nav-toggle" id="navToggle">
@@ -229,6 +233,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Ensure Instagram embed script is present -->
+    <script async src="//www.instagram.com/embed.js"></script>
 
     <style>
         @keyframes spin {
@@ -636,24 +643,16 @@
             }
 
             .hero-poster-section .poster-content-overlay {
-                padding: 10px;
-                max-width: 100%;
-                width: 100%;
-                text-align: center;
-                box-sizing: border-box;
-                position: relative;
-                top: auto;
-                transform: none;
-                margin-top: 0rem; 
-                margin-bottom: 0rem; 
+                padding: 18px 4vw 18px 4vw;
             }
-
             .hero-poster-section .poster-content-overlay h2 {
-                font-size: 1.8rem;
+                font-size: 1.3rem;
+                margin-bottom: 0.7rem;
+                word-break: break-word;
             }
-
             .hero-poster-section .poster-content-overlay p {
-                font-size: 0.9rem;
+                font-size: 0.92rem;
+                margin-bottom: 1.2rem;
             }
 
             .hero-poster-section .cta-button {
@@ -776,17 +775,15 @@
 
         @media (max-width: 480px) {
             .hero-poster-section .poster-content-overlay h2 {
-                font-size: 1.5rem;
+                font-size: 1.05rem;
+                margin-bottom: 0.5rem;
             }
-
             .hero-poster-section .poster-content-overlay p {
-                font-size: 0.85rem;
+                font-size: 0.82rem;
             }
-
             .event-showcase-section h2 {
                 font-size: 1.3rem;
             }
-
             .past-events-section h2 {
                 font-size: 1.3rem;
             }
@@ -1342,6 +1339,24 @@
                 font-size: 1.7rem;
                 right: 10px;
             }
+        }
+
+        /* Instagram Fallback Button Styles */
+        .instagram-fallback-btn {
+            display: inline-block;
+            margin: 0.5rem auto 1.5rem auto;
+            padding: 0.7rem 1.5rem;
+            background: #e6c34d;
+            color: #181818;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            transition: background 0.2s;
+        }
+        .instagram-fallback-btn:hover {
+            background: #ffd700;
+            color: #000;
         }
     </style>
 
