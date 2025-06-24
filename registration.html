@@ -16,7 +16,7 @@
         <div class="nav-brand">
             <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
                 <img src="images/logo.png" alt="Kings Combat Logo" style="height:38px; width:auto; display:block;">
-                <span style="font-size: 1.7rem; font-family: 'Orbitron', sans-serif; color: #e6c34d; letter-spacing: 2px;">KINGS COMBAT</span>
+                <span style="font-size: 1.7rem; font-family: 'Orbitron', sans-serif; color: #e6c34d; letter-spacing: 2px;">KINGS COMBAT EVENTS</span>
             </a>
         </div>
         <div class="nav-toggle" id="navToggle">
@@ -74,6 +74,18 @@
                             <input type="number" id="age" name="age" min="1" max="120" required>
                         </div>
                         <div class="form-group">
+                            <label for="division">Division</label>
+                            <select id="division" name="division" required>
+                                <option value="">Select Division</option>
+                                <option value="dragon">Dragon</option>
+                                <option value="tiger">Tiger</option>
+                                <option value="youth">Youth</option>
+                                <option value="cadet">Cadet</option>
+                                <option value="junior">Junior</option>
+                                <option value="senior">Senior</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="beltRank">Belt Rank</label>
                             <select id="beltRank" name="beltRank" required>
                                 <option value="">Select Belt Rank</option>
@@ -115,11 +127,11 @@
                         </div>
                         <div id="venmoInstructions" style="display:none; margin-top: 1rem; padding: 1rem; background: #2a2a2a; border-radius: 8px; border-left: 4px solid #e6c34d; color: #cccccc; font-size: 0.95rem;">
                             <p><strong>Event Fee: $100</strong></p>
-                            <p><strong>Venmo:</strong> Please send payment to <strong>@kings-combat-events</strong></p>
+                            <p><strong>Venmo:</strong> Please send payment to <strong>@kings-combat-events</strong> <br><span style="color:#e6c34d;">(Remember To Put Athletes Name)</span></p>
                         </div>
                         <div id="zelleInstructions" style="display:none; margin-top: 1rem; padding: 1rem; background: #2a2a2a; border-radius: 8px; border-left: 4px solid #e6c34d; color: #cccccc; font-size: 0.95rem;">
                             <p><strong>Event Fee: $100</strong></p>
-                            <p><strong>Zelle:</strong> Please send payment to <strong>Half a Day Capital Group</strong> at <strong>mahilininc@yahoo.com</strong>.</p>
+                            <p><strong>Zelle:</strong> Please send payment to <strong>Half a Day Capital Group</strong> at <strong>mahilininc@yahoo.com</strong>. <br><span style="color:#e6c34d;">(Remember To Put Athletes Name)</span></p>
                         </div>
                         <div id="cashInstructions" style="display:none; margin-top: 1rem; padding: 1rem; background: #2a2a2a; border-radius: 8px; border-left: 4px solid #e6c34d; color: #cccccc; font-size: 0.95rem;">
                             <p><strong>Event Fee: $100</strong></p>
