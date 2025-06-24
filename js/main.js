@@ -162,6 +162,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Initial check
+
+    const dialog = document.getElementById('highlightLightboxDialog');
+    if (dialog) {
+        dialog.close();
+        dialog.style.display = 'none'; // Force hide in case browser keeps it open
+        if (dialog.hasAttribute('open')) {
+            dialog.removeAttribute('open');
+        }
+    }
 });
 
 // Navbar background change on scroll
@@ -306,6 +315,19 @@ document.addEventListener('DOMContentLoaded', () => {
         openBtn.addEventListener('click', () => {
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            // Dynamically inject Instagram blockquotes
+            const igContainer = modal.querySelector('.event-instagram-videos');
+            if (igContainer) {
+                igContainer.innerHTML = `
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/kingscombatevents/reel/DEdIzA6SpyD/" data-instgrm-version="14" style="background:#FFF; border:0; margin: 1rem auto; max-width: 400px; min-width: 200px;"></blockquote>
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/kingscombatevents/reel/DEX3gIUS2jb/" data-instgrm-version="14" style="background:#FFF; border:0; margin: 1rem auto; max-width: 400px; min-width: 200px;"></blockquote>
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/kingscombatevents/reel/DEX9Au8SGgD/" data-instgrm-version="14" style="background:#FFF; border:0; margin: 1rem auto; max-width: 400px; min-width: 200px;"></blockquote>
+                `;
+            }
+            // Re-initialize Instagram embeds when modal is opened
+            if (window.instgrm && window.instgrm.Embeds && typeof window.instgrm.Embeds.process === 'function') {
+                window.instgrm.Embeds.process();
+            }
         });
         // Close modal (button)
         closeBtn.addEventListener('click', () => {
