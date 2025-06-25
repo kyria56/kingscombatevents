@@ -425,12 +425,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const dialog = document.getElementById('highlightLightboxDialog');
     const dialogImg = document.getElementById('highlightDialogImg');
     const dialogClose = document.querySelector('.highlight-dialog-close');
-    // Use event delegation for highlight images
+    // Restore highlight zoom: open dialog on highlight image click
     document.body.addEventListener('click', function(e) {
         if (e.target.matches('.combined-highlights-grid img')) {
             dialogImg.src = e.target.src;
             dialogImg.alt = e.target.alt;
             dialog.showModal();
+            dialog.style.display = '';
         }
     });
     // Close logic
@@ -440,5 +441,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     dialog.addEventListener('close', () => {
         dialogImg.src = '';
+        dialog.style.display = '';
     });
+    // Remove forced hide on page load (keep only close logic)
+    if (dialog && dialog.open) {
+        dialog.close();
+    }
 }); 
