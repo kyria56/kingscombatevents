@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NY Contact - Kings Combat Events</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ny-red: #ff3c3c;
+            --ny-red-dark: #a80000;
+        }
+        body {
+            background: linear-gradient(135deg, #2a0a0a 0%, #1a1a1a 100%);
+        }
+        .ny-theme {
+            color: var(--ny-red);
+        }
+        .cta-button.ny {
+            background: var(--ny-red);
+            color: #fff;
+            border: none;
+        }
+        .contact-container {
+            max-width: 600px;
+            margin: 4rem auto;
+            background: #232323;
+            border-radius: 18px;
+            box-shadow: 0 0 40px #ff3c3c33;
+            padding: 2.5rem 1.5rem;
+        }
+        .contact-title {
+            color: var(--ny-red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.1rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+        .contact-info {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .contact-info i {
+            color: var(--ny-red);
+            margin-right: 0.5rem;
+        }
+        .contact-form label {
+            color: var(--ny-red);
+            font-weight: 600;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin-top: 0.3rem;
+            margin-bottom: 1.2rem;
+            border-radius: 8px;
+            border: 1.5px solid var(--ny-red);
+            background: #181818;
+            color: #fff;
+            font-size: 1rem;
+        }
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .cta-button.ny {
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 1rem 0;
+            border-radius: 50px;
+            margin-top: 0.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px #ff3c3c55;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .cta-button.ny:hover {
+            background: var(--ny-red-dark);
+            box-shadow: 0 0 40px #ff3c3c99;
+        }
+        .success-message {
+            display: none;
+            color: #ff3c3c;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .contact-container {
+                padding: 1.2rem 0.5rem;
+            }
+            .contact-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="images/logo.png" alt="Kings Combat Logo" style="height:38px; width:auto; display:block;">
+                <span style="font-size: 1.7rem; font-family: 'Orbitron', sans-serif; color: #ff3c3c; letter-spacing: 2px;">KINGS COMBAT EVENTS</span>
+            </a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ny-event.html">NY Event</a></li>
+            <li><a href="ny-registration.html">NY Registration</a></li>
+            <li><a href="ny-contact.html" class="active">NY Contact</a></li>
+        </ul>
+        <div class="nav-social">
+            <a href="https://www.instagram.com/kingscombatsports" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100087523166726" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </nav>
+    <main>
+        <div class="contact-container">
+            <h1 class="contact-title">Contact Kings Combat NY</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Vision Taekwondo, Rego Park, NY</p>
+                <p><i class="fas fa-envelope"></i> kingscombatevents@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (626) 367-6562</p>
+            </div>
+            <form class="contact-form" action="https://formspree.io/f/xzzgnyan" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="cta-button ny">Send Message</button>
+                <div class="success-message">Thank you for reaching out! We'll get back to you soon.</div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> kingscombatevents@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (626) 367-6562</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="ny-event.html">NY Event Info</a></li>
+                    <li><a href="ny-registration.html">NY Registration</a></li>
+                    <li><a href="ny-contact.html">NY Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/kingscombatsports" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100087523166726" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kings Combat Events. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html> 
