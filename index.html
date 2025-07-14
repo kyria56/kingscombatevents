@@ -69,53 +69,248 @@
         </div>
     </nav>
 
-    <!-- New Event Showcase Section -->
-    <section class="event-showcase-section">
-        <div class="grid-overlay"></div>
-        <h2>KINGS COMBAT EVENT: REGISTER NOW!</h2>
-
-        <div class="event-details-flex">
-            <img src="images/host.jpg" alt="Dylan's Picture" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-
-            <div class="event-info-text">
-                <p>Prepare for a unique opportunity at the next Kings Combat exclusive training event!<br><br>Immerse yourself in the world of Taekwondo, as French Superstar Dylan Chellamootoo shares his skill, passion, and knowledge.</p>
-                <p>This is more than just a training session; it's a deep dive into Taekwondo Competitive mastery.<br><br>Don't miss out!</p>
-                <a href="registration.html" class="cta-button" onmouseover="this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 0 30px rgba(255, 235, 59, 0.8), 0 0 15px rgba(255, 235, 59, 0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 0 20px rgba(255, 235, 59, 0.6)'">
-                    Secure Your Spot!
-                </a>
+    <!-- Dual Event Section -->
+    <section class="dual-event-section">
+      <div class="dual-event-flex">
+        <!-- Main Event -->
+        <div class="event-card main-event">
+          <img src="images/posters/poster1.jpg" alt="Main Event Poster" class="event-poster event-modal-trigger" data-modal="main-event-modal">
+          <div class="event-card-logo"><img src="images/logo.png" alt="Kings Combat Logo"></div>
+          <h2 class="event-title main">KINGS COMBAT EVENTS: LA</h2>
+          <p class="event-date main"><i class="fas fa-calendar"></i> August 23, 2025</p>
+          <p class="event-location main"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
+          <a href="registration.html" class="register-btn main">Register Now</a>
+        </div>
+        <!-- NY Event -->
+        <div class="event-card ny-event">
+          <img src="images/ny-poster-placeholder.jpg" alt="New York Event Poster" class="event-poster event-modal-trigger" data-modal="ny-event-modal">
+          <div class="event-card-logo"><img src="images/logo2.png" alt="Kings Combat NY Logo"></div>
+          <h2 class="event-title ny">KINGS COMBAT EVENTS: NEW YORK</h2>
+          <p class="event-date ny"><i class="fas fa-calendar"></i> August 30, 2025</p>
+          <p class="event-location ny"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+          <a href="ny-registration.html" class="register-btn ny">Register Now</a>
+        </div>
+        <!-- Glassmorphism Modals -->
+        <div id="main-event-modal" class="event-modal">
+          <div class="event-modal-bg"></div>
+          <div class="event-modal-content main">
+            <button class="event-modal-close" aria-label="Close">&times;</button>
+            <div class="event-modal-header">
+              <img src="images/logo.png" alt="Kings Combat Logo" class="event-modal-logo">
+              <h2>KINGS COMBAT EVENTS: MAIN</h2>
             </div>
+            <div class="event-modal-body">
+              <img src="images/posters/poster1.jpg" alt="Main Event Poster" class="event-modal-poster">
+              <div class="event-modal-desc">
+                Prepare for a unique opportunity at the next Kings Combat exclusive training event! Immerse yourself in the world of Taekwondo, as French Superstar Dylan Chellamootoo shares his skill, passion, and knowledge.
+              </div>
+              <p><strong>Date:</strong> August 23, 2025</p>
+              <p><strong>Location:</strong> 9400 Lurline Ave Unit A1, Chatsworth, CA 91311</p>
+              <a href="event.html" class="register-btn main">Event Details</a>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <!-- New York Event Section -->
-    <section class="ny-event-section" style="background: linear-gradient(135deg, #2a0a0a 0%, #1a1a1a 100%); border-radius: 18px; box-shadow: 0 0 40px #ff3c3c33;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 3rem 1rem; text-align: center;">
-            <h2 style="color: #ff3c3c; font-family: 'Orbitron', sans-serif; font-size: 2.2rem; margin-bottom: 1.2rem; letter-spacing: 1px;">KINGS COMBAT EVENTS: NEW YORK</h2>
-            <img src="images/ny-poster-placeholder.jpg" alt="New York Event Poster" style="max-width: 340px; width: 90vw; border-radius: 14px; box-shadow: 0 0 24px #ff3c3c55; margin-bottom: 1.2rem;">
-            <p style="color: #fff; font-size: 1.1rem; margin-bottom: 2rem;">A brand new Kings Combat experience is coming to New York! Don’t miss your chance to compete and train with the best.</p>
-            <a href="ny-event.html" class="cta-button" style="background: #ff3c3c; color: #fff; border: none;">View New York Event</a>
+        <div id="ny-event-modal" class="event-modal">
+          <div class="event-modal-bg"></div>
+          <div class="event-modal-content ny">
+            <button class="event-modal-close" aria-label="Close">&times;</button>
+            <div class="event-modal-header">
+              <img src="images/logo2.png" alt="Kings Combat NY Logo" class="event-modal-logo">
+              <h2>KINGS COMBAT EVENTS: NEW YORK</h2>
+            </div>
+            <div class="event-modal-body">
+              <img src="images/ny-poster-placeholder.jpg" alt="New York Event Poster" class="event-modal-poster">
+              <div class="event-modal-desc">
+                A brand new Kings Combat experience is coming to New York! Don't miss your chance to compete and train with the best.
+              </div>
+              <p><strong>Date:</strong> August 30, 2025</p>
+              <p><strong>Location:</strong> Vision Taekwondo, Rego Park, NY</p>
+              <a href="ny-event.html" class="register-btn ny">Event Details</a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <style>
-      @media (max-width: 600px) {
-        .ny-event-section .container {
-          padding: 1.2rem 0.3rem !important;
+      .dual-event-section {
+        background: linear-gradient(90deg, #0a1a2a 0%, #1a1a1a 50%, #2a0a0a 100%);
+        padding: 3.5rem 1rem 3rem 1rem;
+        border-radius: 18px;
+        box-shadow: 0 0 40px #bfa10033, 0 0 40px #ff3c3c33;
+        margin: 2.5rem auto;
+        max-width: 1200px;
+        width: 100%;
+      }
+      .dual-event-flex {
+        display: flex;
+        gap: 2.5rem;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .event-card {
+        background: rgba(26,26,26,0.97);
+        border-radius: 16px;
+        box-shadow: 0 0 30px #bfa10022, 0 0 30px #ff3c3c22;
+        padding: 2.2rem 1.2rem 2rem 1.2rem;
+        max-width: 350px;
+        min-width: 260px;
+        flex: 1 1 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.1rem;
+        position: relative;
+      }
+      .event-card-logo {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background: rgba(26,26,26,0.92);
+        border-radius: 50%;
+        box-shadow: 0 2px 10px #0005, 0 0 0 2px #e6c34d44;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+      }
+      .event-card-logo img {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+        display: block;
+        filter: drop-shadow(0 0 6px #e6c34d88);
+      }
+      .event-poster {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 0 24px #bfa10055, 0 0 24px #ff3c3c55;
+        margin-bottom: 1.1rem;
+      }
+      .event-title {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+        letter-spacing: 1px;
+      }
+      .event-title.main { color: #bfa100; text-shadow: 0 0 10px #bfa10055; }
+      .event-title.ny { color: #ff3c3c; text-shadow: 0 0 10px #ff3c3c55; }
+      .event-date, .event-location {
+        font-size: 1.05rem;
+        font-weight: 500;
+        margin-bottom: 0.1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+      .event-date.main, .event-location.main { color: #bfa100; }
+      .event-date.ny, .event-location.ny { color: #ff3c3c; }
+      .event-desc {
+        color: #fff;
+        font-size: 1.01rem;
+        margin-bottom: 0.7rem;
+      }
+      .cta-button.main {
+        background: linear-gradient(90deg, #bfa100 0%, #ffe066 100%);
+        color: #1a1a1a;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: bold;
+        border-radius: 50px;
+        padding: 0.9rem 2.2rem;
+        font-size: 1.08rem;
+        box-shadow: 0 0 20px #bfa10055;
+        border: none;
+        transition: background 0.2s, box-shadow 0.2s;
+      }
+      .cta-button.main:hover {
+        background: linear-gradient(90deg, #ffe066 0%, #bfa100 100%);
+        box-shadow: 0 0 40px #bfa10099;
+      }
+      .cta-button.ny {
+        background: linear-gradient(90deg, #ff3c3c 0%, #ffe066 100%);
+        color: #1a1a1a;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: bold;
+        border-radius: 50px;
+        padding: 0.9rem 2.2rem;
+        font-size: 1.08rem;
+        box-shadow: 0 0 20px #ff3c3c55;
+        border: none;
+        transition: background 0.2s, box-shadow 0.2s;
+      }
+      .cta-button.ny:hover {
+        background: linear-gradient(90deg, #ffe066 0%, #ff3c3c 100%);
+        box-shadow: 0 0 40px #ff3c3c99;
+      }
+      @media (max-width: 900px) {
+        .dual-event-flex {
+          gap: 1.2rem;
         }
-        .ny-event-section h2 {
-          font-size: 1.2rem !important;
-          margin-bottom: 0.7rem !important;
+        .event-card {
+          max-width: 100%;
         }
-        .ny-event-section img {
-          max-width: 95vw !important;
-          margin-bottom: 0.7rem !important;
+        .event-card-logo {
+          right: 10px;
+          width: 40px;
+          height: 40px;
+          padding: 4px;
         }
-        .ny-event-section p {
-          font-size: 0.98rem !important;
-          margin-bottom: 1.2rem !important;
+        .event-card-logo img {
+          width: 28px;
+          height: 28px;
         }
-        .ny-event-section .cta-button {
-          font-size: 1rem !important;
-          padding: 0.8rem 1.2rem !important;
+      }
+      @media (max-width: 700px) {
+        .dual-event-flex {
+          flex-direction: column;
+          gap: 2.2rem;
+        }
+        .event-card {
+          max-width: 420px;
+          margin: 0 auto;
+        }
+        .event-card-logo {
+          top: 10px;
+          right: 10px;
+          transform: none;
+          width: 36px;
+          height: 36px;
+          padding: 3px;
+        }
+        .event-card-logo img {
+          width: 22px;
+          height: 22px;
+        }
+      }
+      @media (max-width: 500px) {
+        .dual-event-section {
+          padding: 1.2rem 0.2rem 1.2rem 0.2rem;
+        }
+        .event-card {
+          padding: 1.1rem 0.3rem 1.1rem 0.3rem;
+        }
+        .event-title {
+          font-size: 1rem;
+        }
+        .event-date, .event-location {
+          font-size: 0.95rem;
+        }
+        .event-desc {
+          font-size: 0.93rem;
+        }
+        .cta-button.main, .cta-button.ny {
+          font-size: 0.98rem;
+          padding: 0.7rem 1.2rem;
         }
       }
     </style>
@@ -1399,7 +1594,229 @@
             background: #ffd700;
             color: #000;
         }
+
+        /* Glassmorphism Modal Styles */
+        .event-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0; width: 100vw; height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .event-modal.active {
+            display: flex;
+        }
+        .event-modal-bg {
+            position: absolute;
+            left: 0; top: 0; width: 100vw; height: 100vh;
+            background: rgba(20,20,30,0.55);
+            backdrop-filter: blur(8px) saturate(1.3);
+            z-index: 1;
+            transition: background 0.3s;
+        }
+        .event-modal-content {
+            position: relative;
+            z-index: 2;
+            min-width: 320px;
+            max-width: 99vw;
+            width: 570px;
+            background: rgba(255,255,255,0.13);
+            border-radius: 2.2rem;
+            box-shadow: 0 8px 40px #0007, 0 0 0 2px #e6c34d33;
+            padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+            backdrop-filter: blur(18px) saturate(1.8);
+            border: 1.5px solid rgba(255,255,255,0.22);
+            animation: modalPopIn 0.5s cubic-bezier(.23,1.12,.32,1) both;
+        }
+        .event-modal-content.ny {
+            box-shadow: 0 8px 40px #0007, 0 0 0 2px #e64d4d33;
+        }
+        @keyframes modalPopIn {
+            0% { transform: scale(0.85) translateY(40px); opacity: 0; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        .event-modal-header {
+            display: flex;
+            align-items: center;
+            gap: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+        .event-modal-logo {
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.18);
+            box-shadow: 0 2px 10px #0003;
+            padding: 6px;
+            filter: drop-shadow(0 0 8px #e6c34d88);
+        }
+        .event-modal-content.ny .event-modal-logo {
+            filter: drop-shadow(0 0 8px #e64d4d88);
+        }
+        .event-modal-body {
+            text-align: center;
+        }
+        .event-modal-poster {
+            width: 90%;
+            max-width: 260px;
+            border-radius: 1.1rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 2px 16px #0002;
+        }
+        .event-modal-desc {
+            color: #fff;
+            font-size: 1.08rem;
+            font-family: 'Inter', sans-serif;
+            margin: 1.1rem 0 1.3rem 0;
+            line-height: 1.7;
+            background: rgba(26,26,26,0.22);
+            border-radius: 1.1rem;
+            padding: 1.1rem 1.2rem;
+            box-shadow: 0 2px 12px #0002;
+            text-align: left;
+        }
+        .event-modal-content.ny .event-modal-desc {
+            border-left: 4px solid #ff3c3c88;
+        }
+        .event-modal-content.main .event-modal-desc {
+            border-left: 4px solid #bfa10088;
+        }
+        .event-modal-close {
+            position: absolute;
+            top: 1.1rem; right: 1.1rem;
+            background: rgba(255,255,255,0.22);
+            border: none;
+            border-radius: 50%;
+            width: 36px; height: 36px;
+            font-size: 2rem;
+            color: #222;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #0002;
+            transition: background 0.2s;
+        }
+        .event-modal-close:hover {
+            background: rgba(255,255,255,0.38);
+        }
+        @media (max-width: 600px) {
+            .event-modal-content {
+                width: 98vw;
+                min-width: unset;
+                padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+            }
+            .event-modal-header {
+                gap: 0.7rem;
+            }
+            .event-modal-logo {
+                width: 36px; height: 36px; padding: 3px;
+            }
+            .event-modal-poster {
+                max-width: 90vw;
+            }
+            .event-modal-desc {
+                font-size: 0.98rem;
+                padding: 0.7rem 0.7rem;
+            }
+        }
+      /* Register Now Button - Glassy, Animated, Premium */
+      .register-btn {
+        display: inline-block;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 700;
+        font-size: 1.13rem;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        border: 2px solid transparent;
+        background: linear-gradient(120deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 100%), var(--btn-gradient, #bfa100);
+        box-shadow: 0 2px 24px 0 rgba(230,195,77,0.18), 0 0 0 2px rgba(255,255,255,0.08) inset;
+        color: #181818;
+        letter-spacing: 1px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: background 0.25s, box-shadow 0.25s, transform 0.18s;
+        outline: none;
+        margin-top: 0.7rem;
+        margin-bottom: 0.2rem;
+      }
+      .register-btn.main {
+        --btn-gradient: linear-gradient(90deg, #ffe066 0%, #bfa100 100%);
+        color: #1a1a1a;
+        border: 2px solid #bfa10044;
+        box-shadow: 0 0 24px #bfa10055, 0 0 0 2px #fff2 inset;
+      }
+      .register-btn.ny {
+        --btn-gradient: linear-gradient(90deg, #ff3c3c 0%, #ffe066 100%);
+        color: #1a1a1a;
+        border: 2px solid #ff3c3c44;
+        box-shadow: 0 0 24px #ff3c3c55, 0 0 0 2px #fff2 inset;
+      }
+      .register-btn:before {
+        content: '';
+        position: absolute;
+        left: -75%;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(120deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.05) 100%);
+        transform: skewX(-25deg);
+        transition: left 0.4s cubic-bezier(.4,2,.6,1), opacity 0.3s;
+        opacity: 0.7;
+        pointer-events: none;
+      }
+      .register-btn:hover, .register-btn:focus {
+        transform: scale(1.06);
+        box-shadow: 0 0 40px 8px #ffe06699, 0 0 0 2px #fff5 inset;
+        filter: brightness(1.08) saturate(1.2);
+        border-color: #ffe066cc;
+      }
+      .register-btn.main:hover, .register-btn.main:focus {
+        box-shadow: 0 0 40px 8px #ffe066cc, 0 0 0 2px #bfa100cc inset;
+        border-color: #bfa100cc;
+      }
+      .register-btn.ny:hover, .register-btn.ny:focus {
+        box-shadow: 0 0 40px 8px #ff3c3ccc, 0 0 0 2px #ff3c3ccc inset;
+        border-color: #ff3c3ccc;
+      }
+      .register-btn:hover:before, .register-btn:focus:before {
+        left: 120%;
+        opacity: 1;
+        transition: left 0.4s cubic-bezier(.4,2,.6,1), opacity 0.3s;
+      }
+      .register-btn:active {
+        transform: scale(0.98);
+        filter: brightness(0.98);
+      }
+      .register-btn:focus {
+        outline: 2.5px solid #ffe066;
+        outline-offset: 2px;
+      }
+      @media (max-width: 700px) {
+        .register-btn {
+          font-size: 1rem;
+          padding: 0.8rem 1.5rem;
+        }
+      }
     </style>
+
+    <script>
+      // Glassmorphism Modal JS
+      document.querySelectorAll('.event-modal-trigger').forEach(function(img) {
+        img.addEventListener('click', function() {
+          var modalId = img.getAttribute('data-modal');
+          var modal = document.getElementById(modalId);
+          if (modal) modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      document.querySelectorAll('.event-modal-close, .event-modal-bg').forEach(function(el) {
+        el.addEventListener('click', function() {
+          document.querySelectorAll('.event-modal').forEach(function(modal) {
+            modal.classList.remove('active');
+          });
+          document.body.style.overflow = '';
+        });
+      });
+    </script>
 
     <dialog id="highlightLightboxDialog" class="highlight-dialog">
         <form method="dialog" class="highlight-dialog-content">
