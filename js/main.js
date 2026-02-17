@@ -269,22 +269,16 @@ if (termsHeader && termsContent && termsIcon) {
 
 // Payment Method Instructions Display
 const paymentMethodSelect = document.getElementById('paymentMethod');
-const venmoInstructions = document.getElementById('venmoInstructions');
-const zelleInstructions = document.getElementById('zelleInstructions');
 const cashInstructions = document.getElementById('cashInstructions');
 
 const showPaymentInstructions = (method) => {
     // Hide all instructions first
-    venmoInstructions.style.display = 'none';
-    zelleInstructions.style.display = 'none';
-    cashInstructions.style.display = 'none';
+    if (cashInstructions) {
+        cashInstructions.style.display = 'none';
+    }
 
     // Show the selected instruction
-    if (method === 'venmo') {
-        venmoInstructions.style.display = 'block';
-    } else if (method === 'zelle') {
-        zelleInstructions.style.display = 'block';
-    } else if (method === 'cash') {
+    if (method === 'cash' && cashInstructions) {
         cashInstructions.style.display = 'block';
     }
 };
@@ -302,6 +296,8 @@ if (paymentMethodSelect) {
 // --- Combined Modal Logic for Past Events (No Slides) ---
 document.addEventListener('DOMContentLoaded', () => {
     const modals = [
+        { openBtnId: 'openPoster4ModalBtn', modalId: 'pastEvent4Modal' },
+        { openBtnId: 'openPoster5ModalBtn', modalId: 'pastEvent5Modal' },
         { openBtnId: 'openPoster2ModalBtn', modalId: 'pastEvent2Modal' },
         { openBtnId: 'openPoster3ModalBtn', modalId: 'pastEvent3Modal' }
     ];
@@ -361,7 +357,7 @@ function initMobileCarousels() {
     if (window.innerWidth > 768) return; // Only activate on mobile
     
     // For each modal
-    ['pastEvent2Modal', 'pastEvent3Modal'].forEach(modalId => {
+    ['pastEvent4Modal', 'pastEvent5Modal', 'pastEvent2Modal', 'pastEvent3Modal'].forEach(modalId => {
         const modal = document.getElementById(modalId);
         if (!modal) return;
         // Find the 2nd slide (Event Highlights)
