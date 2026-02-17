@@ -69,107 +69,103 @@
         </div>
     </nav>
 
-    <!-- Dual Event Section -->
-    <section class="dual-event-section">
-      <div class="dual-event-flex">
-        <!-- Main Event -->
-        <div class="event-card main-event">
-          <img src="images/posters/poster1.jpg" alt="Main Event Poster" class="event-poster event-modal-trigger" data-modal="main-event-modal">
-          <div class="event-card-logo"><img src="images/logo.png" alt="Kings Combat Logo"></div>
-          <h2 class="event-title main">KINGS COMBAT EVENTS: LA</h2>
-          <p class="event-date main"><i class="fas fa-calendar"></i> August 23, 2025</p>
-          <p class="event-location main"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
-          <a href="registration.html" class="register-btn main">Register Now</a>
-        </div>
-        <!-- NY Event -->
-        <div class="event-card ny-event">
-          <img src="images/ny-poster-placeholder.jpg" alt="New York Event Poster" class="event-poster event-modal-trigger" data-modal="ny-event-modal">
-          <div class="event-card-logo"><img src="images/logo2.png" alt="Kings Combat NY Logo"></div>
-          <h2 class="event-title ny">KINGS COMBAT EVENTS: NEW YORK</h2>
-          <p class="event-date ny"><i class="fas fa-calendar"></i> August 30, 2025</p>
-          <p class="event-location ny"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
-          <a href="ny-registration.html" class="register-btn ny">Register Now</a>
-        </div>
-        <!-- Glassmorphism Modals -->
-        <div id="main-event-modal" class="event-modal">
-          <div class="event-modal-bg"></div>
-          <div class="event-modal-content main">
-            <button class="event-modal-close" aria-label="Close">&times;</button>
-            <div class="event-modal-header">
-              <img src="images/logo.png" alt="Kings Combat Logo" class="event-modal-logo">
-              <h2>KINGS COMBAT EVENTS: MAIN</h2>
+    <!-- Featured Event Section -->
+    <section class="featured-event-section">
+      <div class="featured-event-container">
+        <div class="featured-event-card">
+          <img src="images/new-event.jpg" alt="Kings Combat Event Poster" class="featured-event-poster event-modal-trigger" data-modal="featured-event-modal">
+          <div class="featured-event-logo"><img src="images/logo.png" alt="Kings Combat Logo"></div>
+          <div class="featured-event-content">
+            <h2 class="featured-event-title">KINGS COMBAT EVENTS</h2>
+            <p class="featured-event-host">with <strong>Farzad Mansouri</strong> • 2X Olympian</p>
+            <div class="featured-event-details">
+              <p class="featured-event-date"><i class="fas fa-calendar"></i> Sunday, March 22, 2026</p>
+              <p class="featured-event-location"><i class="fas fa-map-marker-alt"></i> 9400 Lurline Ave, Unit A1, Chatsworth, CA 91311</p>
             </div>
-            <div class="event-modal-body">
-              <img src="images/posters/poster1.jpg" alt="Main Event Poster" class="event-modal-poster">
-              <div class="event-modal-desc">
-                Prepare for a unique opportunity at the next Kings Combat exclusive training event! Immerse yourself in the world of Taekwondo, as French Superstar Dylan Chellamootoo shares his skill, passion, and knowledge.
-              </div>
-              <p><strong>Date:</strong> August 23, 2025</p>
-              <p><strong>Location:</strong> 9400 Lurline Ave Unit A1, Chatsworth, CA 91311</p>
-              <a href="event.html" class="register-btn main">Event Details</a>
-            </div>
+            <a href="registration.html" class="register-btn main">Register Now</a>
           </div>
         </div>
-        <div id="ny-event-modal" class="event-modal">
-          <div class="event-modal-bg"></div>
-          <div class="event-modal-content ny">
-            <button class="event-modal-close" aria-label="Close">&times;</button>
-            <div class="event-modal-header">
-              <img src="images/logo2.png" alt="Kings Combat NY Logo" class="event-modal-logo">
-              <h2>KINGS COMBAT EVENTS: NEW YORK</h2>
-            </div>
+      </div>
+      <!-- Glassmorphism Modal -->
+      <div id="featured-event-modal" class="event-modal">
+        <div class="event-modal-bg"></div>
+        <div class="event-modal-content main">
+          <button class="event-modal-close" aria-label="Close">&times;</button>
+          <div class="event-modal-header">
+            <img src="images/logo.png" alt="Kings Combat Logo" class="event-modal-logo">
+            <h2>KINGS COMBAT EVENTS</h2>
+          </div>
             <div class="event-modal-body">
-              <img src="images/ny-poster-placeholder.jpg" alt="New York Event Poster" class="event-modal-poster">
-              <div class="event-modal-desc">
-                A brand new Kings Combat experience is coming to New York! Don't miss your chance to compete and train with the best.
+              <img src="images/new-event.jpg" alt="Event Poster" class="event-modal-poster">
+            <div class="event-modal-host-info">
+              <h3 style="color: #e6c34d; font-family: 'Orbitron', sans-serif; margin-bottom: 0.5rem;">Farzad Mansouri</h3>
+              <p style="color: #ffe066; margin-bottom: 1rem; font-weight: 600;">2X Olympian</p>
+              <div class="host-achievements-list">
+                <p><i class="fas fa-medal"></i> Asian Silver Medalist</p>
+                <p><i class="fas fa-trophy"></i> European Qualification Bronze Medalist – Paris 2024</p>
+                <p><i class="fas fa-star"></i> 2x European Club Champion</p>
+                <p><i class="fas fa-award"></i> Multiple International Medalist</p>
+                <p><i class="fas fa-flag"></i> Olympic Qualification: Tokyo 2020 & Paris 2024</p>
               </div>
-              <p><strong>Date:</strong> August 30, 2025</p>
-              <p><strong>Location:</strong> Vision Taekwondo, Rego Park, NY</p>
-              <a href="ny-event.html" class="register-btn ny">Event Details</a>
             </div>
+            <div class="event-modal-desc">
+              <h4 style="color: #e6c34d; margin-bottom: 0.8rem;">What You'll Learn:</h4>
+              <ul style="text-align: left; padding-left: 1.5rem; line-height: 1.8;">
+                <li>Olympic-style sparring & drills</li>
+                <li>Scoring with Daedo & KP&P</li>
+                <li>Speed, power & reaction training</li>
+                <li>2026 Rules & Techniques for Daedo 3</li>
+                <li>Live Q&A with Farzad Mansouri</li>
+              </ul>
+            </div>
+            <div class="event-modal-schedule">
+              <h4 style="color: #e6c34d; margin-bottom: 0.8rem;">Schedule:</h4>
+              <p><strong>9:30 AM</strong> – Check-in</p>
+              <p><strong>10:00 AM – 3:00 PM</strong> – Main session</p>
+              <p><strong>3:00 PM – 4:00 PM</strong> – Bonus Session (World Class Athletes)</p>
+            </div>
+            <p style="margin-top: 1.5rem;"><strong>Date:</strong> Sunday, March 22, 2026</p>
+            <p><strong>Location:</strong> 9400 Lurline Ave, Unit A1, Chatsworth, CA 91311</p>
+            <a href="registration.html" class="register-btn main">Register Now</a>
           </div>
         </div>
       </div>
     </section>
     <style>
-      .dual-event-section {
-        background: linear-gradient(90deg, #0a1a2a 0%, #1a1a1a 50%, #2a0a0a 100%);
-        padding: 3.5rem 1rem 3rem 1rem;
+      .featured-event-section {
+        background: linear-gradient(135deg, #0a1a2a 0%, #1a1a1a 50%, #2a0a0a 100%);
+        padding: 4rem 1rem;
         border-radius: 18px;
-        box-shadow: 0 0 40px #bfa10033, 0 0 40px #ff3c3c33;
+        box-shadow: 0 0 40px #bfa10033;
         margin: 2.5rem auto;
         max-width: 1200px;
         width: 100%;
       }
-      .dual-event-flex {
+      .featured-event-container {
         display: flex;
-        gap: 2.5rem;
-        max-width: 1100px;
-        margin-left: auto;
-        margin-right: auto;
         justify-content: center;
-        flex-wrap: wrap;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
       }
-      .event-card {
+      .featured-event-card {
         background: rgba(26,26,26,0.97);
         border-radius: 16px;
-        box-shadow: 0 0 30px #bfa10022, 0 0 30px #ff3c3c22;
-        padding: 2.2rem 1.2rem 2rem 1.2rem;
-        max-width: 350px;
-        min-width: 260px;
-        flex: 1 1 320px;
+        box-shadow: 0 0 30px #bfa10022;
+        padding: 2.5rem 2rem;
+        max-width: 600px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 1.1rem;
+        gap: 1.5rem;
         position: relative;
       }
-      .event-card-logo {
+      .featured-event-logo {
         position: absolute;
-        right: 18px;
-        top: 50%;
-        transform: translateY(-50%);
+        right: 20px;
+        top: 20px;
         z-index: 2;
         background: rgba(26,26,26,0.92);
         border-radius: 50%;
@@ -181,44 +177,80 @@
         width: 48px;
         height: 48px;
       }
-      .event-card-logo img {
+      .featured-event-logo img {
         width: 36px;
         height: 36px;
         object-fit: contain;
         display: block;
         filter: drop-shadow(0 0 6px #e6c34d88);
       }
-      .event-poster {
+      .featured-event-poster {
         width: 100%;
-        max-width: 320px;
+        max-width: 500px;
         border-radius: 12px;
-        box-shadow: 0 0 24px #bfa10055, 0 0 24px #ff3c3c55;
-        margin-bottom: 1.1rem;
+        box-shadow: 0 0 24px #bfa10055;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        transition: transform 0.3s;
       }
-      .event-title {
+      .featured-event-poster:hover {
+        transform: scale(1.02);
+      }
+      .featured-event-content {
+        width: 100%;
+      }
+      .featured-event-title {
         font-family: 'Orbitron', sans-serif;
-        font-size: 1.35rem;
+        font-size: 2rem;
         font-weight: 700;
-        margin-bottom: 0.2rem;
-        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        letter-spacing: 2px;
+        color: #bfa100;
+        text-shadow: 0 0 10px #bfa10055;
       }
-      .event-title.main { color: #bfa100; text-shadow: 0 0 10px #bfa10055; }
-      .event-title.ny { color: #ff3c3c; text-shadow: 0 0 10px #ff3c3c55; }
-      .event-date, .event-location {
-        font-size: 1.05rem;
+      .featured-event-host {
+        color: #ffe066;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
         font-weight: 500;
-        margin-bottom: 0.1rem;
+      }
+      .featured-event-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .featured-event-date, .featured-event-location {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #bfa100;
         display: flex;
         align-items: center;
         gap: 0.5rem;
         justify-content: center;
       }
-      .event-date.main, .event-location.main { color: #bfa100; }
-      .event-date.ny, .event-location.ny { color: #ff3c3c; }
-      .event-desc {
+      .host-achievements-list {
+        text-align: left;
+        margin: 1rem 0;
+      }
+      .host-achievements-list p {
         color: #fff;
-        font-size: 1.01rem;
-        margin-bottom: 0.7rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .host-achievements-list i {
+        color: #e6c34d;
+        width: 20px;
+      }
+      .event-modal-schedule {
+        margin-top: 1.5rem;
+        text-align: left;
+      }
+      .event-modal-schedule p {
+        color: #fff;
+        margin-bottom: 0.5rem;
       }
       .cta-button.main {
         background: linear-gradient(90deg, #bfa100 0%, #ffe066 100%);
@@ -253,61 +285,55 @@
         box-shadow: 0 0 40px #ff3c3c99;
       }
       @media (max-width: 900px) {
-        .dual-event-flex {
-          gap: 1.2rem;
+        .featured-event-section {
+          padding: 2.5rem 1rem;
         }
-        .event-card {
-          max-width: 100%;
+        .featured-event-card {
+          padding: 2rem 1.5rem;
         }
-        .event-card-logo {
-          right: 10px;
+        .featured-event-logo {
+          right: 15px;
+          top: 15px;
           width: 40px;
           height: 40px;
           padding: 4px;
         }
-        .event-card-logo img {
+        .featured-event-logo img {
           width: 28px;
           height: 28px;
         }
       }
       @media (max-width: 700px) {
-        .dual-event-section {
-          padding: 0.7rem 0.1rem 0.7rem 0.1rem;
+        .featured-event-section {
+          padding: 1.5rem 0.5rem;
           max-width: 100vw;
         }
-        .dual-event-flex {
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 1rem;
-          justify-content: center;
-          align-items: flex-start;
+        .featured-event-card {
+          padding: 1.5rem 1rem;
+          border-radius: 12px;
         }
-        .event-card {
-          width: 90vw;
-          max-width: 340px;
-          min-width: 0;
-          margin: 0.5rem;
-          padding: 0.7rem 0.2rem;
-          border-radius: 10px;
-          gap: 0.7rem;
+        .featured-event-poster {
+          max-width: 100%;
         }
-        .event-card-logo {
-          width: 28px;
-          height: 28px;
-          padding: 1.5px;
-          top: 8px;
-          right: 8px;
+        .featured-event-title {
+          font-size: clamp(1.2rem, 4vw, 1.8rem);
         }
-        .event-card-logo img {
-          width: 15px;
-          height: 15px;
+        .featured-event-host {
+          font-size: clamp(1rem, 3vw, 1.1rem);
         }
-        .event-title {
-          font-size: clamp(0.95rem, 3vw, 1.15rem);
-          margin-bottom: 0.3rem;
+        .featured-event-date, .featured-event-location {
+          font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
-        .event-date, .event-location {
-          font-size: clamp(0.85rem, 2.5vw, 1rem);
+        .featured-event-logo {
+          width: 32px;
+          height: 32px;
+          padding: 2px;
+          right: 10px;
+          top: 10px;
+        }
+        .featured-event-logo img {
+          width: 20px;
+          height: 20px;
         }
         .register-btn {
           font-size: clamp(0.93rem, 2.5vw, 1.05rem);
@@ -351,28 +377,35 @@
         }
       }
       @media (max-width: 500px) {
-        .dual-event-flex {
-          flex-direction: column;
-          gap: 1.2rem;
-          align-items: center;
+        .featured-event-section {
+          padding: 1rem 0.3rem;
         }
-        .dual-event-section {
-          padding: 0.3rem 0.05rem 0.3rem 0.05rem;
+        .featured-event-card {
+          padding: 1rem 0.5rem;
         }
-        .event-card {
-          width: 98vw;
-          max-width: 98vw;
-          padding: 0.5rem 0.05rem;
+        .featured-event-title {
+          font-size: clamp(1rem, 4vw, 1.5rem);
         }
-        .event-title {
-          font-size: clamp(0.85rem, 3vw, 1rem);
+        .featured-event-host {
+          font-size: clamp(0.9rem, 3vw, 1rem);
         }
-        .event-date, .event-location {
-          font-size: clamp(0.8rem, 2vw, 0.95rem);
+        .featured-event-date, .featured-event-location {
+          font-size: clamp(0.85rem, 2.5vw, 0.95rem);
         }
         .register-btn {
           font-size: clamp(0.85rem, 2vw, 0.98rem);
           padding: 0.5rem 0.5rem;
+        }
+        .featured-event-logo {
+          width: 28px;
+          height: 28px;
+          padding: 1.5px;
+          right: 8px;
+          top: 8px;
+        }
+        .featured-event-logo img {
+          width: 18px;
+          height: 18px;
         }
         .event-modal-content {
           padding: 0.4rem 0.05rem 0.4rem 0.05rem;
@@ -399,6 +432,22 @@
         <h2>RELIVE THE GLORY</h2>
         <p>Journey through the annals of Kings Combat history. Witness the epic battles, the triumphs, and the moments that defined our legacy.</p>
         <div class="past-events-grid">
+            <div class="poster-item" id="openPoster4ModalBtn">
+                <img src="images/posters/poster1.jpg" alt="LA Event Poster">
+                <div class="poster-caption">Los Angeles Event</div>
+                <div class="poster-hover-overlay">
+                    <i class="fas fa-search-plus"></i>
+                    <span>View Details</span>
+                </div>
+            </div>
+            <div class="poster-item" id="openPoster5ModalBtn">
+                <img src="images/ny-poster-placeholder.jpg" alt="NY Event Poster">
+                <div class="poster-caption">New York Event</div>
+                <div class="poster-hover-overlay">
+                    <i class="fas fa-search-plus"></i>
+                    <span>View Details</span>
+                </div>
+            </div>
             <div class="poster-item" id="openPoster2ModalBtn">
                 <img src="images/posters/poster2.jpg" alt="Past Event Poster 2">
                 <div class="poster-caption">Farzad Mansouri</div>
@@ -543,6 +592,90 @@
                     <h3 class="section-label">Event Video</h3>
                     <div class="combined-video-wrapper">
                         <iframe src="https://www.youtube.com/embed/0XLL3JvAQFQ" title="Event Video 2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LA Event Modal -->
+    <div id="pastEvent4Modal" class="image-gallery-modal">
+        <div class="image-gallery-modal-content combined-modal">
+            <span class="image-gallery-close">&times;</span>
+            <div class="combined-modal-flex">
+                <!-- Poster -->
+                <div class="combined-poster-section">
+                    <h3 class="section-label">Event Poster</h3>
+                    <img src="images/posters/poster1.jpg" alt="LA Event Poster" class="combined-poster-img">
+                </div>
+                <!-- Highlights -->
+                <div class="combined-highlights-section">
+                    <h3 class="section-label">Event Highlights</h3>
+                    <div class="combined-highlights-grid">
+                        <img src="images/poster2/placeholder1.jpg" alt="Highlight 1">
+                        <img src="images/poster2/placeholder2.jpg" alt="Highlight 2">
+                        <img src="images/poster2/placeholder3.jpg" alt="Highlight 3">
+                        <img src="images/poster2/placeholder4.jpg" alt="Highlight 4">
+                        <img src="images/poster2/placeholder5.jpg" alt="Highlight 5">
+                        <img src="images/poster2/placeholder6.jpg" alt="Highlight 6">
+                    </div>
+                </div>
+                <!-- Host Info -->
+                <div class="combined-host-section">
+                    <h3 class="section-label">Host</h3>
+                    <img src="images/host.jpg" alt="Dylan Chellamootoo" class="combined-host-img">
+                    <h4>Dylan Chellamootoo</h4>
+                    <p>French Superstar and Olympic Athlete who shared his skill, passion, and knowledge at this exclusive Kings Combat training event in Los Angeles.</p>
+                </div>
+                <!-- Event Details -->
+                <div class="combined-video-section">
+                    <h3 class="section-label">Event Details</h3>
+                    <div style="text-align: left; color: #fff; padding: 1rem;">
+                        <p><strong>Date:</strong> August 23, 2025</p>
+                        <p><strong>Location:</strong> 9400 Lurline Ave Unit A1, Chatsworth, CA 91311</p>
+                        <p>Prepare for a unique opportunity at the next Kings Combat exclusive training event! Immerse yourself in the world of Taekwondo, as French Superstar Dylan Chellamootoo shares his skill, passion, and knowledge.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NY Event Modal -->
+    <div id="pastEvent5Modal" class="image-gallery-modal">
+        <div class="image-gallery-modal-content combined-modal">
+            <span class="image-gallery-close">&times;</span>
+            <div class="combined-modal-flex">
+                <!-- Poster -->
+                <div class="combined-poster-section">
+                    <h3 class="section-label">Event Poster</h3>
+                    <img src="images/ny-poster-placeholder.jpg" alt="NY Event Poster" class="combined-poster-img">
+                </div>
+                <!-- Highlights -->
+                <div class="combined-highlights-section">
+                    <h3 class="section-label">Event Highlights</h3>
+                    <div class="combined-highlights-grid">
+                        <img src="images/poster2/placeholder1.jpg" alt="Highlight 1">
+                        <img src="images/poster2/placeholder2.jpg" alt="Highlight 2">
+                        <img src="images/poster2/placeholder3.jpg" alt="Highlight 3">
+                        <img src="images/poster2/placeholder4.jpg" alt="Highlight 4">
+                        <img src="images/poster2/placeholder5.jpg" alt="Highlight 5">
+                        <img src="images/poster2/placeholder6.jpg" alt="Highlight 6">
+                    </div>
+                </div>
+                <!-- Host Info -->
+                <div class="combined-host-section">
+                    <h3 class="section-label">Host</h3>
+                    <img src="images/host.jpg" alt="Dylan Chellamootoo" class="combined-host-img">
+                    <h4>Dylan Chellamootoo</h4>
+                    <p>French Superstar and Olympic Athlete who brought a brand new Kings Combat experience to New York, sharing world-class training and expertise.</p>
+                </div>
+                <!-- Event Details -->
+                <div class="combined-video-section">
+                    <h3 class="section-label">Event Details</h3>
+                    <div style="text-align: left; color: #fff; padding: 1rem;">
+                        <p><strong>Date:</strong> August 30, 2025</p>
+                        <p><strong>Location:</strong> Vision Taekwondo, Rego Park, NY</p>
+                        <p>A brand new Kings Combat experience came to New York! Participants had the chance to compete and train with the best in the industry.</p>
                     </div>
                 </div>
             </div>
